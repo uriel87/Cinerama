@@ -1,0 +1,21 @@
+{
+  "name": "cinerama",
+  "version": "1.0.0",
+  "description": "cinerama client side",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Uriel Chechique",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uriel87/cinerama.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uriel87/cinerama/issues"
+  },
+  "homepage": "https://github.com/uriel87/cinerama#readme"
+}

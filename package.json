@@ -8,7 +8,9 @@
   },
   "author": "Uriel Chechique",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "angular-route": "^1.6.6"
+  },
   "devDependencies": {},
   "repository": {
     "type": "git",

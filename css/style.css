@@ -58,7 +58,8 @@ a:hover {
       right: 2.1em;
       width: 14em;
       text-align: center;
-      max-height: 999px; }
+      max-height: 999px;
+      z-index: 1; }
       .menu #user-navigation nav li {
         text-transform: capitalize;
         width: 100%;
@@ -98,35 +99,13 @@ a:hover {
   margin: 4em 0em; }
   .wrapper-carousel .movies-carousel {
     max-width: 90%;
-    padding: 2em 4em;
-    overflow: hidden;
-    height: 25em;
+    padding: 2em 0em;
     margin: auto; }
-    .wrapper-carousel .movies-carousel .slide {
-      opacity: 1;
-      width: 50000px;
-      transform: translate3d(-357px, 0px, 0px);
-      transition: transform ease-out 0.5s; }
-      .wrapper-carousel .movies-carousel .slide section {
-        display: inline-block;
-        text-align: center;
-        margin: 1em 3em;
-        box-shadow: 5px 5px 8px #78736d; }
-        .wrapper-carousel .movies-carousel .slide section img {
-          max-height: 12em;
-          min-height: 18em;
-          max-width: 13em;
-          min-width: 12em; }
-    .wrapper-carousel .movies-carousel i {
-      font-size: 6em;
-      position: absolute;
-      top: 3.2em;
-      z-index: 1;
-      color: #42464a;
-      font-weight: 900; }
-    .wrapper-carousel .movies-carousel #carousel-left {
-      left: .25em; }
-    .wrapper-carousel .movies-carousel #carousel-right {
-      right: .25em; }
+    .wrapper-carousel .movies-carousel .slide section {
+      margin: 1em 3em;
+      box-shadow: 10px 9px 20px #78736d; }
+      .wrapper-carousel .movies-carousel .slide section img {
+        height: auto;
+        max-width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 
-app.controller('moviesCtl', ['$scope', 'movieService', function ($scope, movieService) {
+app.controller('moviesCtl', ['$scope', 'movieService','$timeout', function ($scope, movieService, $timeout) {
 
     $scope.getMovie = function(movie) {
         return movieService.getMovie(movie)
@@ -36,48 +36,18 @@ app.controller('moviesCtl', ['$scope', 'movieService', function ($scope, movieSe
         }), function error(err) {
         return err;
     }
-
-
-    $scope.position = -357;
-
-
-     function updateMovieList(reverse) {
-         if(reverse) {
-             $scope.movieList.unshift($scope.movieList.pop())
-
-         } else {
-             $scope.movieList.push($scope.movieList.shift())
-         }
-     }
-
-
-    $scope.carouselLeft = function() {
-        $("#carousel-left").click(function(){
-            $scope.position = $scope.position - 50;
-            $(".slide").css({"transform": "translate3d(" + $scope.position + "px, 0px, 0px)"});
-            console.log("position: " + $scope.position)
-        });
-        updateMovieList(true)
-    };
-
-    $scope.carouselRight = function() {
-
-        if($scope.position > 0) {
-            updateMovieList(false)
-            $scope.position = -357;
-        } else {
-            $("#carousel-right").click(function(){
-                // if(position < -107) {
-                $scope.position = $scope.position + 50;
-                $(".slide").css({"transform": "translate3d(" + $scope.position + "px, 0px, 0px)"});
-                console.log("position: " + $scope.position)
-                // }
-            });
-        }
-    };
-
-
     
+
+    $timeout(function () {
+        $(".slide").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            centerPadding: '60px',
+            autoplay: true,
+            autoplaySpeed: 2000,
+        });
+    },2000);
+
 }]);
 
 

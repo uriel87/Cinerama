@@ -78,7 +78,6 @@ a:hover {
     }
 
     nav {
-      //visibility: visible;
       position: absolute;
       top: 6.3em;
       background-color: #42464a;
@@ -86,6 +85,7 @@ a:hover {
       width: 14em;
       text-align: center;
       max-height: 999px;
+      z-index: 1;
 
       li {
         text-transform: capitalize;
@@ -150,50 +150,22 @@ a:hover {
 
   .movies-carousel {
     max-width: 90%;
-    padding: 2em 4em;
-    overflow: hidden;
-    height: 25em;
+    padding: 2em 0em;
     margin: auto;
 
     .slide {
-      opacity: 1;
-      width: 50000px;
-      transform: translate3d(-357px, 0px, 0px);
-      transition: transform ease-out 0.5s;
-
 
       section {
-        display: inline-block;
-        text-align: center;
         margin: 1em 3em;
-        box-shadow: 5px 5px 8px rgb(120, 115, 109);
+        box-shadow: 10px 9px 20px #78736d;
 
         img {
-          max-height: 12em;
-          min-height: 18em;
-          max-width: 13em;
-          min-width: 12em;
+          height: auto;
+          max-width: 100%;
         }
 
       }
 
-    }
-
-    i{
-      font-size: 6em;
-      position: absolute;
-      top: 3.2em;
-      z-index: 1;
-      color: #42464a;
-      font-weight: 900;
-    }
-
-    #carousel-left {
-      left: .25em;
-    }
-
-    #carousel-right {
-      right: .25em;
     }
 
   }

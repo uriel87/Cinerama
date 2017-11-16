@@ -1,17 +1,16 @@
 {
   "name": "cinerama",
   "version": "1.0.0",
-  "description": "cinerama client",
+  "description": "cinerama client side",
   "main": "index.js",
   "dependencies": {
-    "angular": "^1.6.6",
     "angular-cookies": "^1.6.6",
     "angular-route": "^1.6.6",
+    "angular": "^1.6.6",
     "package-name": "^0.1.0"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

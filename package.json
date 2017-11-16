@@ -1,21 +1,24 @@
 {
   "name": "cinerama",
   "version": "1.0.0",
-  "description": "cinerama client side",
+  "description": "cinerama client",
   "main": "index.js",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-cookies": "^1.6.6",
+    "angular-route": "^1.6.6",
+    "package-name": "^0.1.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Uriel Chechique",
-  "license": "ISC",
-  "dependencies": {
-    "angular-route": "^1.6.6"
-  },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uriel87/cinerama.git"
   },
+  "author": "Uriel Chechique",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/uriel87/cinerama/issues"
   },

@@ -1,5 +1,17 @@
 
 
 
-<h1>main</h1>
+<menu show-user-nav ></menu>
+
+<article class="wrapper-carousel">
+    <article class="movies-carousel">
+        <i id="carousel-left" class="fa fa-angle-left" ng-click="carouselLeft()"></i>
+        <section class="slide">
+            <section ng-repeat="movie in movieList">
+                <img src="{{movie.poster}}" alt="{{movie.title}}">
+            </section>
+        </section>
+        <i id="carousel-right" class="fa fa-angle-right" ng-click="carouselRight()"></i>
+    </article>
+</article>
 

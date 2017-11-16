@@ -8,14 +8,14 @@ app.config(["$routeProvider",'$locationProvider', function($routeProvider, $loca
 
     $routeProvider
         .when("/logIn", {
-            templateUrl: '../views/logIn.html'
-            // controller: 'mainCtl',
+            templateUrl: '../views/logIn.html',
+            controller: 'logInCtl'
         })
         .when("/main", {
-            templateUrl: '../views/main.html'
-            // controller: 'mainCtl',
+            templateUrl: '../views/main.html',
+            controller: 'moviesCtl'
         })
         .otherwise({
-            redirectTo: '/main'
+            redirectTo: '/logIn'
         });
 }]);

@@ -42,7 +42,6 @@ app.service('facebookApiService', ['$cookies','$location', 'userService', functi
             if (response.status === 'connected') {
                 var accessToken = response.authResponse.accessToken;
                 console.log('response.status - ' + JSON.stringify(response.status));
-
             }
         } );
 
@@ -68,7 +67,6 @@ app.service('facebookApiService', ['$cookies','$location', 'userService', functi
                             console.log('user details - ' + JSON.stringify(response));
                             userService.putUserCookies(response.name, response.email, response.picture.data.url);
                             userService.addUserToDb(response.name, response.email, response.picture.data.url, response.birthday);
-
                             $location.path('/main');
                         });
                     } else {

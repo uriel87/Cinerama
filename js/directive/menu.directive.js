@@ -14,7 +14,7 @@ app.directive('menu',['userService', 'facebookApiService', function (userService
         templateUrl: '../views/templates/menu.html',
         transclude: true,
         scope: {
-            showUserNav: '@'
+            showUserNav: '='
         },
         link: function(scope, element, attributes) {
             scope.userDetails = userService.getUser();

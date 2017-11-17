@@ -1,5 +1,5 @@
 
-app.service('movieService', ['$http', function ($http) {
+app.service('movieService', ['$http','$q', function ($http, $q) {
 
     var thisService = this;
 
@@ -37,5 +37,34 @@ app.service('movieService', ['$http', function ($http) {
                 }
             });
     };
+
+
+    this.movies = function() {
+
+        var movieList = $q.defer();
+        var movieListTemp = [];
+
+        return $http.post("https://cineramaserver.herokuapp.com/getAllReviews")
+            .then(function(movieData) {
+
+                angular.forEach(movieData.data, function(value, key) {
+
+                    var query = {
+                        name: value.name
+                    }
+
+                    $http.post("https://cineramaserver.herokuapp.com/getMovie/", query)
+                        .then(function(movieData) {
+                            movieListTemp.push(movieData.data);
+                        }), function error(err) {
+                        return err;
+                    }
+
+                });
+                movieList.resolve(movieListTemp);
+                return movieList.promise;
+            })
+    };
+
 
 }]);

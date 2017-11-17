@@ -12,23 +12,23 @@ app.controller('moviesCtl', ['$scope', 'movieService','$timeout', function ($sco
         }
     };
 
-    $scope.movieList = [];
-    movieService.getMovieList()
-        .then(function(movieData) {
-
-            angular.forEach(movieData.data, function(value, key) {
-                return movieService.getMovie(value.name)
-                    .then(function(movieData) {
-                        console.log("movieData: " + JSON.stringify(movieData));
-                        $scope.movieList.push(movieData.data);
-                    }), function error(err) {
-                    return err;
-                }
-
-            });
-        }), function error(err) {
-        return err;
-    };
+    // $scope.movieList = [];
+    // movieService.getMovieList()
+    //     .then(function(movieData) {
+    //
+    //         angular.forEach(movieData.data, function(value, key) {
+    //             return movieService.getMovie(value.name)
+    //                 .then(function(movieData) {
+    //                     console.log("movieData: " + JSON.stringify(movieData));
+    //                     $scope.movieList.push(movieData.data);
+    //                 }), function error(err) {
+    //                 return err;
+    //             }
+    //
+    //         });
+    //     }), function error(err) {
+    //     return err;
+    // };
     
     movieService.getAllMovie()
         .then(function(moviesData) {
@@ -36,6 +36,11 @@ app.controller('moviesCtl', ['$scope', 'movieService','$timeout', function ($sco
         }), function error(err) {
         return err;
     }
+
+    movieService.movies().then(function(data){
+        $scope.movieList = data
+        console.log("movieList(): " + JSON.stringify($scope.movieList))
+    });
     
 
     $timeout(function () {
@@ -46,7 +51,7 @@ app.controller('moviesCtl', ['$scope', 'movieService','$timeout', function ($sco
             autoplay: true,
             autoplaySpeed: 2000,
         });
-    },2000);
+    },4000);
 
 }]);
 

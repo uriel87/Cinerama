@@ -15,6 +15,10 @@ app.config(["$routeProvider",'$locationProvider', function($routeProvider, $loca
             templateUrl: '../views/main.html',
             controller: 'moviesCtl'
         })
+        .when("/movie/:movie/", {
+            templateUrl: '../views/movie.html',
+            controller: 'movieCtl',
+        })
         .otherwise({
             redirectTo: '/logIn'
         });

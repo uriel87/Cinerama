@@ -1,25 +1,16 @@
 
-app.service('movieService', ['$http', 'userService', '$q','$sce', function ($http, userService, $q, $sce) {
+app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', function ($http, userService, $q, $sce, $cookies) {
 
-    // var thisService = this;
+    var thisService = this;
 
     this.currentMovie = null;
 
     this.movieList = null;
 
-    // this.getMovieListWithDetails = function () {
-    //     console.log("this.currentMovie in this.getMovieList: " + this.currentMovie)
-    //     if(!this.currentMovie) {
-    //         movieService.movies($scope.movie.title).then(function(data){
-    //             console.log("movieCtl.getMovieTrailer: " + JSON.stringify($scope.movieTrailer))
-    //             $scope.movieList = data;
-    //         });
-    //     }
-    //     return this.movieList
-    // }
-
-
     this.getCurrentMovie = function () {
+        // if(!this.currentMovie) {
+        //     this.currentMovie = thisService.getMovieCurrentCookies()
+        // }
         return this.currentMovie
     }
 
@@ -183,7 +174,13 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', function ($htt
 
     }
 
+    this.putMovieCurrentCookies = function (movie){
+        $cookies.put('currentMovie', JSON.stringify(movie));
+    }
 
+    this.getMovieCurrentCookies = function (movie){
+        return $cookies.get('currentMovie');
+    }
 
 
     // $http.post("https://cineramaserver.herokuapp.com/getMovieReview/", data).success(function(review, status) {

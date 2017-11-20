@@ -114,7 +114,7 @@ a:hover {
   color: #febd11;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 3fr 1fr;
+  grid-auto-rows: 25em 5em;
   border-top: 1px solid #cbcbcb;
   box-shadow: 0px -1px 0px #000;
   padding: 0 7%;
@@ -139,6 +139,12 @@ a:hover {
       margin-bottom: 1.5em;
       display: grid;
       grid-template-columns: 1fr 3fr; }
+      .footer-movie .company-details li span {
+        text-align: left; }
+      .footer-movie .company-details li:nth-child(n+3) span:nth-child(2) {
+        grid-area: 3/2/4/3; }
+      .footer-movie .company-details li:nth-child(n+3) span:nth-child(3) {
+        grid-area: 2/2/3/3; }
   .footer-movie .company-menu {
     justify-self: center; }
     .footer-movie .company-menu li {
@@ -183,8 +189,6 @@ a:hover {
     padding: 2em 0;
     background-color: #42464a;
     color: #febd11; }
-    .moviePage form input {
-      text-transform: uppercase; }
   .moviePage .movie-list-wrapper .movie-list {
     position: relative;
     display: inline-block;
@@ -227,7 +231,8 @@ a:hover {
   height: 35em; }
   .about h1 {
     text-align: center;
-    margin: 1em 0; }
+    margin: 1em 0;
+    text-transform: uppercase; }
 
 .contact-us {
   background-color: #e2e2e2;

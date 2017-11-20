@@ -15,6 +15,7 @@ app.controller('moviesCtl', ['$scope', 'movieService','$location', function ($sc
 
     $scope.goToMoviePage = function(movie) {
         movieService.setCurrentMovie(movie);
+        movieService.putMovieCurrentCookies(movie);
         console.log("goToMoviePage: " + movie);
         $location.path("/movie").replace();
     };

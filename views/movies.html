@@ -6,17 +6,18 @@
 <section class="moviePage">
 
     <h1>now in the cinema</h1>
-
     <h2>find your movie</h2>
     <form action="">
-        <input type="text" placeholder="movie name">
-        <select name="" id="">
-            <option ng-repeat="gener in movieGener" value="gener">{{gener}}</option>
+        <input type="text" placeholder="movie name" ng-model="movieTitleFilter">
+        <!--<select ng-model="movieGenerFilter" ng-options="gener for gener in movieGener"></select>-->
+        <select name="" id="" ng-model="movieGenerFilter">
+            <option ng-repeat="gener in movieGener" value="{{gener}}">{{gener}}</option>
         </select>
+
     </form>
 
     <section class="movie-list-wrapper">
-        <section ng-repeat="movie in movieList" class="movie-list" ng-click="goToMoviePage(movie)">
+        <section ng-repeat="movie in movieList | filter:movieTitleFilter | filter:movieGenerFilter" class="movie-list" ng-click="goToMoviePage(movie)">
             <img src="{{movie.poster}}" alt="{{movie.title}}">
             <section class="movie-details">
                 <p>{{movie.title}}</p>
@@ -25,6 +26,7 @@
             </section>
         </section>
     </section>
+
 
 </section>
 

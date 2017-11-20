@@ -1,0 +1,32 @@
+
+
+
+<menu show-user-nav ></menu>
+
+<section class="moviePage">
+
+    <h1>now in the cinema</h1>
+
+    <h2>find your movie</h2>
+    <form action="">
+        <input type="text" placeholder="movie name">
+        <select name="" id="">
+            <option ng-repeat="gener in movieGener" value="gener">{{gener}}</option>
+        </select>
+    </form>
+
+    <section class="movie-list-wrapper">
+        <section ng-repeat="movie in movieList" class="movie-list" ng-click="goToMoviePage(movie)">
+            <img src="{{movie.poster}}" alt="{{movie.title}}">
+            <section class="movie-details">
+                <p>{{movie.title}}</p>
+                <p>{{movie.genres}}</p>
+                <p><i class="fa fa-imdb"></i><span>{{movie.rating}}</span></p>
+            </section>
+        </section>
+    </section>
+
+</section>
+
+<footer-movie></footer-movie>
+

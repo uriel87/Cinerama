@@ -20,8 +20,9 @@ app.directive('carousel',['movieService','$location', function (movieService, $l
         link: function(scope, element, attributes) {
 
             scope.goToMoviePage = function(movie) {
+                movieService.setCurrentMovie(movie);
                 console.log("goToMoviePage: " + movie);
-                $location.path("/movie/"+ movie).replace();
+                $location.path("/movie").replace();
             };
 
         }

@@ -7,7 +7,7 @@
  *
  ******************************/
 
-app.directive('menu',['userService', 'facebookApiService', function (userService, facebookApiService) {
+app.directive('menu',['userService', 'facebookApiService', '$location', function (userService, facebookApiService, $location) {
     return {
         restrict: 'E',
         replace: true,
@@ -17,6 +17,7 @@ app.directive('menu',['userService', 'facebookApiService', function (userService
             showUserNav: '='
         },
         link: function(scope, element, attributes) {
+
             scope.userDetails = userService.getUser();
             scope.logOut = function() {
                 facebookApiService.logOut();

@@ -1,7 +1,31 @@
 
-app.service('movieService', ['$http','$q', function ($http, $q) {
+app.service('movieService', ['$http', 'userService', '$q','$sce', function ($http, userService, $q, $sce) {
 
-    var thisService = this;
+    // var thisService = this;
+
+    this.currentMovie = null;
+
+    this.movieList = null;
+
+    // this.getMovieListWithDetails = function () {
+    //     console.log("this.currentMovie in this.getMovieList: " + this.currentMovie)
+    //     if(!this.currentMovie) {
+    //         movieService.movies($scope.movie.title).then(function(data){
+    //             console.log("movieCtl.getMovieTrailer: " + JSON.stringify($scope.movieTrailer))
+    //             $scope.movieList = data;
+    //         });
+    //     }
+    //     return this.movieList
+    // }
+
+
+    this.getCurrentMovie = function () {
+        return this.currentMovie
+    }
+
+    this.setCurrentMovie = function (movie) {
+        this.currentMovie = movie;
+    }
 
     this.getMovie = function(movie) {
 
@@ -62,9 +86,115 @@ app.service('movieService', ['$http','$q', function ($http, $q) {
 
                 });
                 movieList.resolve(movieListTemp);
+                console.log("movieListTemp: " + movieListTemp)
                 return movieList.promise;
             })
     };
+
+
+    this.getMovieCineramaDetails = function (movie) {
+
+        console.log("getMovieCineramaDetails - movie: " + JSON.stringify(movie));
+
+        var defer = $q.defer();
+
+        var query = {
+            name: movie
+        }
+
+        $http.post("https://cineramaserver.herokuapp.com/getMovieDetails/", query)
+            .then(function (response) {
+                // console.log("getMovieCineramaDetails - response.data: " + JSON.stringify(response.data));
+                defer.resolve(response.data);
+            });
+        return defer.promise;
+
+    }
+
+
+    this.getMovieTrailer = function (movie) {
+
+        console.log("in getMovieTrailer - movie: " + JSON.stringify(movie));
+
+        var defer = $q.defer();
+
+        var query = {
+            name: movie
+        }
+
+        $http.post("https://cineramaserver.herokuapp.com/getMovieTrailer/", query)
+            .then(function (response) {
+                var urltrailer = $sce.trustAsResourceUrl(response.data);
+                defer.resolve(urltrailer);
+            });
+        return defer.promise;
+
+    }
+
+
+    this.getMovieReview = function (movie) {
+
+        console.log("in getMovieReview - movie: " + JSON.stringify(movie));
+
+        var defer = $q.defer();
+
+        var query = {
+            name: movie
+        }
+
+        $http.post("https://cineramaserver.herokuapp.com/getMovieReview/", query)
+            .then(function (response) {
+                defer.resolve(response);
+            });
+        return defer.promise;
+
+    }
+
+
+
+
+    this.pushMovieReview = function (query) {
+
+        // var query = {
+        //     nameMovie: this.currentMovie,
+        //     userName: userService.getUser().name,
+        //     comment: comment,
+        //     review: review
+        // }
+
+        $http.post("https://cineramaserver.herokuapp.com/pushReview/", query)
+            .then(function (response) {
+                // defer.resolve(response);
+            });
+    }
+
+
+
+    this.getMoviesGeners = function () {
+
+        var defer = $q.defer()
+
+        $http.get("./data/movieGener.json")
+            .then(function (response) {
+                defer.resolve(response);
+            });
+
+        return defer.promise;
+
+    }
+
+
+
+
+    // $http.post("https://cineramaserver.herokuapp.com/getMovieReview/", data).success(function(review, status) {
+    //     $scope.review = review;
+    //     $scope.lastComment = review[0].reviews[review[0].reviews.length - 1];
+    //     //console.log($scope.review);
+    // });
+
+
+
+
 
 
 }]);

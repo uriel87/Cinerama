@@ -1,5 +1,15 @@
 
+<menu show-user-nav ></menu>
 
-<article>
-    <p>{{movie}}</p>
-</article>
+<p>{{movie}}</p>
+<p>{{movieCineramaDetails}}</p>
+<p>{{movieTrailer}}</p>
+<p>{{movieReview}}</p>
+<p>lastCommentReview: {{lastCommentReview}}</p>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" ng-src={{movieTrailer}}></iframe>
+</div>
+
+<footer-movie></footer-movie>
+
+

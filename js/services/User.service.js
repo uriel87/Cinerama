@@ -1,5 +1,5 @@
 
-app.service('userService', ['$http', '$cookies', function ($http, $cookies) {
+app.service('userService', ['$http', '$cookies', '$q', function ($http, $cookies, $q) {
 
     this.putUserCookies = function (userName, userEmail, userPicture){
         $cookies.put('userName', userName);
@@ -72,6 +72,20 @@ app.service('userService', ['$http', '$cookies', function ($http, $cookies) {
         }
     }
 
+    this.getUserMoviesOrder = function () {
 
+        var defer = $q.defer();
+
+        var query = {
+            name: this.getUser.userEmail
+        }
+
+        $http.post("https://cineramaserver.herokuapp.com/getMovieUser/", query)
+            .then(function (response) {
+                defer.resolve(response.data);
+            });
+        return defer.promise;
+
+    }
 
 }]);

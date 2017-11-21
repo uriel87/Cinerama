@@ -3,16 +3,16 @@
 
 <menu show-user-nav ></menu>
 
-<section class="moviePage">
+<section class="moviesPage">
 
     <h1>now in the cinema</h1>
     <h2>find your movie</h2>
     <form action="">
-        <input type="text" placeholder="movie name" ng-model="movieTitleFilter">
-        <!--<select ng-model="movieGenerFilter" ng-options="gener for gener in movieGener"></select>-->
-        <select name="" id="" ng-model="movieGenerFilter">
-            <option ng-repeat="gener in movieGener" value="{{gener}}">{{gener}}</option>
-        </select>
+        <input type="text" placeholder="enter movie name" ng-model="movieTitleFilter">
+        <select ng-model="movieGenerFilter" ng-options="gener for gener in movieGener"></select>
+        <!--<select name="" id="" ng-model="movieGenerFilter">-->
+            <!--<option ng-repeat="gener in movieGener" value="{{gener}}">{{gener}}</option>-->
+        <!--</select>-->
 
     </form>
 

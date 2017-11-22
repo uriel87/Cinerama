@@ -1,0 +1,15 @@
+
+[
+    {
+      "name": "materCard",
+      "image": "./images/masterCard.jpg"
+    },
+    {
+      "name": "visa",
+      "image": "./images/visa.jpg"
+    },
+    {
+      "name": "american express",
+      "image": "./images/amex.jpg"
+    }
+]

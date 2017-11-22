@@ -162,7 +162,7 @@ a:hover {
 
         img {
           height: auto;
-          max-width: 100%;
+          width: 100%;
         }
 
       }
@@ -557,6 +557,10 @@ a:hover {
       width: 40%;
       margin: 2em 3em;
 
+      h4 {
+        text-transform: capitalize;
+      }
+
       strong, span  {
         text-transform: capitalize;
       }
@@ -567,6 +571,100 @@ a:hover {
 }
 
 
+
+.movieOrder {
+
+  width: 90%;
+  margin: auto;
+  padding: 2em 0;
+  text-align: center;
+  text-transform: capitalize;
+
+  h2 {
+    margin-bottom: 1.5em;
+  }
+
+  p{
+    color: #ff0000;
+  }
+
+  div {
+    //display: inline-block;
+    //width: 30%;
+
+    display: block;
+    margin: 2em auto;
+
+    label {
+      display: block;
+    }
+
+    input,
+    select,
+    button {
+      margin: .5em 1em;
+      padding: 0.25em 1em;
+      width: 20em;
+      height: 3em;
+      background-color: #42464a;
+      border: .1em solid;
+      transition: all .8s;
+      text-transform: capitalize;
+      color: #bcbcbc;
+      }
+
+      button {
+        display: inline-block;
+        margin: .5em 1em;
+        width: 5em;
+        background-color: #42464a;
+        color: #bcbcbc;
+        border: .1em solid;
+        text-transform: capitalize;
+
+        //&:focus {
+        //  color: $background-color;
+        //  background-color: $text-color;
+        //}
+
+      }
+
+    .timeChoose {
+      color: $background-color;
+      background-color: $text-color;
+    }
+
+      input[type='checkbox'] {
+        width: 2em;
+        height: 2em;
+        background-color: $background-color;
+        box-shadow: inset 0px 0px 200px 50px $background-color, 0px 1px 10px #000;
+      }
+
+      input[type='checkbox']:checked {
+        background-color: $text-color;
+        box-shadow: inset 0px 0px 200px 50px $text-color, 0px 1px 10px #000;
+      }
+
+  }
+
+  button {
+    display: block;
+    width: 18em;
+    padding: 1em 4em;
+    margin: 3em auto 1em;
+    background-color: $text-color;
+    outline: none;
+    border: none;
+    color: $background-color;
+    font-size: 1.5em;
+    font-weight: 700;
+    border-radius: 15px;
+  }
+
+
+
+}
 
 
 .progress-bar-review {
@@ -588,9 +686,54 @@ a:hover {
 
 }
 
-//.width-progress-bar($width) {
-//  width: $width+'%';
-//}
+
+.timeChoose {
+  color: $background-color;
+  background-color: $text-color;
+}
+
+
+
+
+.movie-payment{
+
+    padding: 2em;
+    margin: auto;
+
+
+
+  form {
+    width: 90%;
+    margin: 2em auto;
+    text-align: center;
+
+    .creditcard-option {
+      display: inline-block;
+      width: 10%;
+      margin: 0 2%;
+
+      input[type='radio'] {
+        margin-right: 1%;
+      }
+
+    }
+
+    div {
+      display: block;
+      width: 20%;
+      margin: 1em auto;
+
+      label {
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
 
 
 

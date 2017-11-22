@@ -1,0 +1,57 @@
+
+
+<menu show-user-nav ></menu>
+
+<!--<p>{{products}}</p>-->
+<!--<p>{{creditCards}}</p>-->
+
+<section class="movie-payment">
+
+    <form>
+
+        <div ng-repeat="card in creditCards" class="creditcard-option">
+            <input type="radio" name="creditCard" value="{{card.name}}"><img src="{{card.image}}" alt="{{card.name}}"><br>
+        </div>
+
+        <div>
+            <label>Credit number</label>
+            <input type="text">
+        </div>
+
+        <div>
+            <label>Exp. Date</label>
+            <input type="date">
+        </div>
+
+        <div>
+            <label>CVV</label>
+            <input type="text">
+        </div>
+
+        <h><b>Total: </b>{{Userseats.length}} tikets </h>
+        <button ng-click="sendOrderRequest()" type="submit" >Pay {{getCartPrice()}} NIS</button>
+
+    </form>
+</section>
+
+
+
+<section>
+
+    <div class=cafeteria>
+        <h4>Add food & drink to cart</h4>
+
+        <div ng-repeat = "product in products" class="productBox">
+            <span class="badge" ng-show="product.quantity > 1">+{{product.quantity}}</span>
+            <img src="{{product.image}}" alt="{{product.name}}">
+            <nav>
+                <li>{{product.size}}</li>
+                <li>{{product.name}}</li>
+            </nav>
+            <button ng-click="addToCart(product);" class="btn btn-danger">{{product.price}} NIS</button>
+        </div>
+    </div>
+</section>
+
+<footer-movie></footer-movie>
+

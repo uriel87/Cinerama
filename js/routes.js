@@ -23,9 +23,9 @@ app.config(["$routeProvider",'$locationProvider', function($routeProvider, $loca
             templateUrl: '../views/movies.html',
             controller: 'moviesCtl'
         })
-        .when("/cafeteria", {
-            templateUrl: '../views/cafeteria.html',
-            controller: 'cafeteriaCtl'
+        .when("/payment", {
+            templateUrl: '../views/payment.html',
+            controller: 'paymentCtl'
         })
         .when("/userMovieOrder", {
             templateUrl: '../views/userMovieOrder.html',

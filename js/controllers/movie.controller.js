@@ -3,6 +3,9 @@
 
 app.controller('movieCtl', ['$scope', 'movieService','$location','$timeout', function ($scope, movieService, $location, $timeout) {
 
+    $scope.Userseats = [];
+    $scope.requireInput = false
+
     if(movieService.getCurrentMovie() == undefined){
         $location.path('/main').replace();
     }
@@ -40,7 +43,6 @@ app.controller('movieCtl', ['$scope', 'movieService','$location','$timeout', fun
     }
 
     $scope.getReviewPercentage = function (review) {
-
         //setTimeout(function() {
             if(!review) {
                 widthPrecetage = 0;
@@ -55,6 +57,51 @@ app.controller('movieCtl', ['$scope', 'movieService','$location','$timeout', fun
             return widthRating
         //}, 50);
     }
+
+    $scope.setCurrentMovie = function (currentBranch) {
+        $scope.CurrentBranch = [];
+        for (var i = 0; i < $scope.movieCineramaDetails.length; i++) {
+            if( ($scope.movieCineramaDetails[i]._id.branch == currentBranch._id.branch) && ($scope.movieCineramaDetails[i]._id.cinema == currentBranch._id.cinema)) {
+                $scope.CurrentBranch.push(angular.extend({}, $scope.movieCineramaDetails[i]));
+            }
+        }
+        console.log($scope.CurrentBranch);
+    }
+
+    $scope.movieChooseByTime = function(movieChoose) {
+        $scope.movieChoose = movieChoose;
+    };
+
+    $scope.setSeat = function(seats, isChecked) {
+
+        if(isChecked) {
+            $scope.Userseats.push(seats);
+            $scope.requireInput = true;
+            console.log($scope.Userseats);
+            console.log("$scope.requireInput: " + $scope.requireInput);
+
+        } else {
+            var index = $scope.Userseats.indexOf(seats);
+            $scope.Userseats.splice(index, 1);
+            console.log($scope.Userseats);
+            if(!angular.equals($scope.Userseats), {}){
+                $scope.requireInput = false;
+            }
+            console.log("$scope.requireInput: " + $scope.requireInput);
+        }
+
+    };
+
+    $scope.itemClicked = function ($index) {
+        $scope.selectedIndex = $index;
+    }
+
+    $scope.goToPaymentPage = function() {
+        if($scope.requireInput) {
+            movieService.setMovieChoosenForOrder(angular.extend($scope.movieChoose, $scope.Userseats));
+            $location.path('/payment').replace();
+        }
+    };
 
 }]);
 

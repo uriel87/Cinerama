@@ -29,76 +29,60 @@
         </section>
     </section>
 
-
-
     <section class="movie-review">
         <h2>Audience review's</h2>
-        <h4 ng-hide="getTotalReview()">No reviews for the movie {{movie.title}}</h4>
+        <h4 ng-hide="getTotalReview()">No reviews have added yet for the movie {{movie.title}}</h4>
         <section  ng-show="getTotalReview()">
+            <h4>recently review</h4>
             <p><strong>name: </strong>{{lastCommentReview.name}}</p>
-            <p><strong>Recently review: </strong>{{lastCommentReview.review}}</p>
-            <p><strong>Recently comment: </strong>{{lastCommentReview.comment}}</p>
+            <p><strong>review: </strong>{{lastCommentReview.review}}</p>
+            <p><strong>comment: </strong>{{lastCommentReview.comment}}</p>
         </section>
 
         <section  ng-show="getTotalReview()">
+            <h4>total review</h4>
             <p><strong>total review: </strong>{{getTotalReview()}}</p>
-            <span>wow: {{movieReview[0].wow}}</span>
+            <strong>wow: {{movieReview[0].wow}}</strong>
             <div class="progress-bar-review">
                 <div class="progress-bar-rating" ng-style="getReviewPercentage(movieReview[0].wow)"></div>
             </div>
-            <span>nice: {{movieReview[0].nice}}</span>
+            <strong>nice: {{movieReview[0].nice}}</strong>
             <div class="progress-bar-review">
                 <div class="progress-bar-rating" ng-style="getReviewPercentage(movieReview[0].nice)"></div>
             </div>
-            <span>lame: {{movieReview[0].lame}}</span>
+            <strong>lame: {{movieReview[0].lame}}</strong>
             <div class="progress-bar-review">
                 <div class="progress-bar-rating" ng-style="getReviewPercentage(movieReview[0].lame)"></div>
             </div>
-            <span>wtf: {{movieReview[0].wtf}}</span>
+            <strong>wtf: {{movieReview[0].wtf}}</strong>
             <div class="progress-bar-review">
                 <div class="progress-bar-rating" ng-style="getReviewPercentage(movieReview[0].wtf)"></div>
             </div>
         </section>
     </section>
 
-    <!--<section class = "orderMovie">-->
-        <!--<h3>Pick movie seats</h3>-->
-        <!--<form>-->
-            <!--<div class="col-xs-7">-->
-                <!--<label>Movie theater</label>-->
-                <!--<select ng-change = "changeCurrentMovie(currentBranch)"  ng-model='currentBranch' required ng-options="branch._id.branch + ' ' +  branch._id.cinema for branch in movies" ></select>-->
-            <!--</div>-->
 
-            <!--<div class="col-xs-4">-->
-                <!--<label>Seats</label>-->
-                <!--<select>-->
-                    <!--<option ng-repeat="seatNumber in [1, 2, 3, 4]"> {{ seatNumber }} </option>-->
-                <!--</select>-->
-            <!--</div>-->
-
-            <!--&lt;!&ndash;TODO metrix 2x2&ndash;&gt;-->
-            <!--<div class = "movieTime container">-->
-                <!--<label>Seats</label>-->
-                <!--<button class="col-xs-3" ng-click = "movieChooseByTime(CurrentBranch[$index]); itemClicked($index)" ng-repeat="timesMovie in CurrentBranch | limitTo: 4" ng-class="$index == selectedIndex ? 'timeChoose': 'nonTimeChoose' "> {{ CurrentBranch[$index]._id.time.substring(11,16)}} </button>-->
-            <!--</div>-->
-
-            <!--<div class = "auditorium">-->
-                <!--<h3>Screen</h3>-->
-                <!--<p>Center</p>-->
-                <!--<label>-->
-                    <!--<input type="checkbox" ng-model="isChecked" ng-click = "setSeat(movieChoose._id.seats[$index], isChecked)" ng-disabled="{{movieChoose._id.seats[$index]}}.occupied" class="seatCheckbox" ng-repeat="seats in movieChoose._id.seats">{{movieChoose._id.seats[$index]}}-->
-                <!--</label>-->
-            <!--</div>-->
-
-            <!--<button id="buyBtn" ng-click="goToPaymentPage()" type="submit">Buy</button>-->
-
-        <!--</form>-->
-
-        <!--&lt;!&ndash;<h4>Relevant movie</h4>&ndash;&gt;-->
-        <!--&lt;!&ndash;<div class="relevantMovie">&ndash;&gt;-->
-        <!--&lt;!&ndash;<div class="relevantMovieBox" ng-repeat="seatNumber in [1, 2, 3]"> {{ relevantMovie }}</div>&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--</section>-->
+    <section class="movieOrder">
+        <h2>movie order</h2>
+        <form>
+            <div>
+                <label>movie theater</label>
+                <select ng-change = "setCurrentMovie(currentBranch)"  ng-model='currentBranch' required ng-options="branch._id.cinema + ' ' +  branch._id.branch for branch in movieCineramaDetails"></select>
+            </div>
+            <div>
+                <label>time</label>
+                <button ng-click = "movieChooseByTime(CurrentBranch[$index]); itemClicked($index)" ng-repeat="timesMovie in CurrentBranch" ng-class="$index == selectedIndex ? 'timeChoose': 'nonTimeChoose' "> {{ CurrentBranch[$index]._id.time.substring(11,16)}} </button>
+            </div>
+            <div class = "auditorium" ng-show="movieChoose">
+                <h3>pick your seats</h3>
+                <label>
+                    <input type="checkbox" ng-model="isChecked" ng-click = "setSeat(CurrentBranch[0]._id.seats[$index], isChecked)" ng-disabled="CurrentBranch[0]._id.seats[$index].occupied" class="seat" ng-repeat="seats in CurrentBranch[0]._id.seats">{{CurrentBranch[0]._id.seats[$index]}}
+                </label>
+            </div>
+            <button id="buyBtn" ng-click="goToPaymentPage()" type="submit">Buy</button>
+        </form>
+        <p ng-hide="requireInput">*choose moview order not complete</p>
+    </section>
 
 </section>
 

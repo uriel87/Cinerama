@@ -1,7 +1,27 @@
 
 
 
-app.service('paymentService', ['$http','$q', function ($http, $q) {
+app.service('cafeteriaService', ['$http','$q', function ($http, $q) {
+
+    this.cart = [];
+
+    this.setCart = function (cart) {
+        this.cart = cart;
+    }
+
+    this.getCart = function () {
+        return this.cart;
+    }
+
+    // this.addToCart = function (product) {
+    //     this.cart.push(product)
+    // }
+    //
+    // this.removeFromCart = function (product) {
+    //     if(!this.cart.empty()) {
+    //         this.cart.splice(index, 1);
+    //     }
+    // }
 
     this.getCafeteriaProducts = function () {
 

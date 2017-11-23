@@ -1,25 +1,7 @@
 
 
-<menu show-user-nav ></menu>
 
-<section class="payment">
-
-    <section class=cafeteria>
-        <h2>cafeteria</h2>
-        <h3>choose your products</h3>
-        <div ng-repeat = "product in products">
-            <span ng-show="product.quantity > 0">+{{product.quantity}}</span>
-            <img src="{{product.image}}" alt="{{product.name}}">
-            <ul>
-                <li><strong>size: {{product.size}}</strong></li>
-                <li><strong>{{product.name}}</strong></li>
-            </ul>
-            <button ng-click="addToCart(product);">{{product.price}} <i class="fa fa-eur"></i></button>
-        </div>
-
-    </section>
-
-    <section class="movie-payment">
+    <section>
         <h2>payment</h2>
         <form>
             <div ng-repeat="card in creditCards" class="creditcard-option">
@@ -49,8 +31,4 @@
 
         </form>
     </section>
-
-</section>
-
-<footer-movie></footer-movie>
 

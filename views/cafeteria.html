@@ -1,0 +1,24 @@
+
+<menu show-user-nav ></menu>
+
+<section class=cafeteria>
+
+    <h2>cafeteria</h2>
+    <h3>choose your products</h3>
+    <div ng-repeat = "product in products">
+        <span ng-show="product.quantity > 0"><strong>+ {{product.quantity}}</strong></span>
+        <img src="{{product.image}}" alt="{{product.name}}">
+        <ul>
+            <li><strong>size: {{product.size}}</strong></li>
+            <li><strong>{{product.name}}</strong></li>
+            <li><strong>price: {{product.price}} <i class="fa fa-eur"></i></strong></li>
+        </ul>
+        <button ng-click="addToCart(product);"><i class="fa fa-cart-plus"></i> add to cart</button>
+    </div>
+
+    <button ng-click="goToPayment()"><strong>continue</strong></button>
+
+</section>
+
+<footer-movie></footer-movie>
+

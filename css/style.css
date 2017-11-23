@@ -409,16 +409,17 @@ a:hover {
       box-shadow: inset 0px 0px 200px 50px #febd11, 0px 1px 10px #000; }
   .movieOrder button {
     display: block;
-    width: 18em;
-    padding: 1em 4em;
-    margin: 3em auto 1em;
-    background-color: #febd11;
-    outline: none;
-    border: none;
+    margin: 2em auto;
+    width: 15em;
+    padding: .5em 0em;
+    text-decoration: none;
+    background: #febd11;
     color: #42464a;
+    border: none;
+    border-radius: 20px;
+    outline: none;
     font-size: 1.5em;
-    font-weight: 700;
-    border-radius: 15px; }
+    text-transform: uppercase; }
 
 .progress-bar-review {
   height: .3em;
@@ -439,14 +440,11 @@ a:hover {
   color: #42464a;
   background-color: #febd11; }
 
-.payment {
+.movie-payment {
   padding: 2em 3em;
   margin: auto;
   background-color: #bcbcbc;
   text-align: center; }
-
-.movie-payment {
-  padding-top: 4em; }
   .movie-payment h2 {
     text-transform: uppercase;
     margin-bottom: 1em;
@@ -498,8 +496,10 @@ a:hover {
       font-size: 1.5em; }
 
 .cafeteria {
-  border-bottom: 1px solid #42464a;
-  padding-bottom: 4em; }
+  padding: 2em 3em;
+  margin: auto;
+  background-color: #bcbcbc;
+  text-align: center; }
   .cafeteria h2 {
     text-transform: uppercase;
     margin-bottom: 1em;
@@ -527,15 +527,29 @@ a:hover {
       width: 40%;
       height: auto; }
     .cafeteria div button {
-      width: 6em;
+      width: 10em;
+      margin: .5em auto;
       background-color: #42464a;
       color: #febd11;
       border-radius: 20px;
       border: none;
       outline: none;
-      font-size: 1.5em; }
+      font-size: 1em; }
     .cafeteria div button:active {
       background-color: #febd11;
       color: #42464a; }
+  .cafeteria button {
+    display: block;
+    margin: 2em auto;
+    width: 15em;
+    padding: .5em 0em;
+    text-decoration: none;
+    background: #febd11;
+    color: #42464a;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 1.5em;
+    text-transform: capitalize; }
 
 /*# sourceMappingURL=style.css.map */

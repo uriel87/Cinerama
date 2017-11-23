@@ -1,24 +1,24 @@
 
 
-app.controller('paymentCtl', ['$scope','paymentService', 'movieService', function ($scope, paymentService, movieService) {
+app.controller('cafeteriaCtl', ['$scope','cafeteriaService', 'movieService', '$location', function ($scope, cafeteriaService, movieService, $location) {
 
 
     // if(userService.checkUserLogIn()){
     //     $location.path('/logIn').replace();
     // }
 
-    paymentService.getCafeteriaProducts().then(function(data){
-        $scope.products = data
-    });
-
-    paymentService.getCreditCards().then(function(data){
-        $scope.creditCards = data
-        console.log("$scope.CreditCards: " + JSON.stringify($scope.creditCards));
-    });
+    $scope.cart = [];
 
     $scope.movie = movieService.getmovieChoosenForOrder();
 
-    $scope.cart = [];
+    cafeteriaService.getCafeteriaProducts().then(function(data){
+        $scope.products = data
+    });
+
+    cafeteriaService.getCreditCards().then(function(data){
+        $scope.creditCards = data
+        console.log("$scope.CreditCards: " + JSON.stringify($scope.creditCards));
+    });
 
     $scope.addToCart = function (product) {
         var found = false;
@@ -33,6 +33,13 @@ app.controller('paymentCtl', ['$scope','paymentService', 'movieService', functio
         }
     };
 
+    this.removeFromCart = function (product) {
+        if(!$scope.cart.contain(product)) {
+            var index = $scope.cart.indexOf(product);
+            $scope.Userseats.splice(index, 1);
+        }
+    }
+
     $scope.getCartPrice = function () {
         var totalPrice = $scope.movie.seats.length * 10;
         $scope.cart.forEach(function (product) {
@@ -41,9 +48,10 @@ app.controller('paymentCtl', ['$scope','paymentService', 'movieService', functio
         return totalPrice;
     };
 
-    // $scope.returnToOrder = function () {
-    //     $state.go('order' , {movie_name: $scope.movieDetails._id.name});
-    // };
+    $scope.goToPayment = function () {
+        cafeteriaService.setCart($scope.cart);
+        $location.path('/orderSummary').replace();
+    };
 
 
 

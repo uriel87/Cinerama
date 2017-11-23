@@ -79,7 +79,7 @@
                     <input type="checkbox" ng-model="isChecked" ng-click = "setSeat(CurrentBranch[0]._id.seats[$index], isChecked)" ng-disabled="CurrentBranch[0]._id.seats[$index].occupied" class="seat" ng-repeat="seats in CurrentBranch[0]._id.seats">{{CurrentBranch[0]._id.seats[$index]}}
                 </label>
             </div>
-            <button id="buyBtn" ng-click="goToPaymentPage()" type="submit">Buy</button>
+            <button id="buyBtn" ng-click="goToPaymentPage()" type="submit"><strong>continue</strong></button>
         </form>
         <p ng-hide="requireInput">*choose moview order not complete</p>
     </section>

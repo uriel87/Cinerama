@@ -88,4 +88,14 @@ app.service('userService', ['$http', '$cookies', '$q', function ($http, $cookies
 
     }
 
+    this.cart = [];
+
+    this.setUserCart = function (cart) {
+        this.cart = cart;
+    }
+
+    this.getUserCart = function () {
+        return this.cart;
+    }
+
 }]);

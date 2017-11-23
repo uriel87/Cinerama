@@ -3,15 +3,15 @@
 
 app.service('cafeteriaService', ['$http','$q', function ($http, $q) {
 
-    this.cart = [];
-
-    this.setCart = function (cart) {
-        this.cart = cart;
-    }
-
-    this.getCart = function () {
-        return this.cart;
-    }
+    // this.cart = [];
+    //
+    // this.setUserCart = function (cart) {
+    //     this.cart = cart;
+    // }
+    //
+    // this.getUserCart = function () {
+    //     return this.cart;
+    // }
 
     // this.addToCart = function (product) {
     //     this.cart.push(product)

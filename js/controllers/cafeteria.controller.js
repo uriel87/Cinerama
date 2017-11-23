@@ -1,6 +1,6 @@
 
 
-app.controller('cafeteriaCtl', ['$scope','cafeteriaService', 'movieService', '$location', function ($scope, cafeteriaService, movieService, $location) {
+app.controller('cafeteriaCtl', ['$scope','cafeteriaService', 'movieService', 'userService', '$location', function ($scope, cafeteriaService, movieService, userService, $location) {
 
 
     // if(userService.checkUserLogIn()){
@@ -8,8 +8,6 @@ app.controller('cafeteriaCtl', ['$scope','cafeteriaService', 'movieService', '$l
     // }
 
     $scope.cart = [];
-
-    $scope.movie = movieService.getmovieChoosenForOrder();
 
     cafeteriaService.getCafeteriaProducts().then(function(data){
         $scope.products = data
@@ -41,7 +39,7 @@ app.controller('cafeteriaCtl', ['$scope','cafeteriaService', 'movieService', '$l
     }
 
     $scope.getCartPrice = function () {
-        var totalPrice = $scope.movie.seats.length * 10;
+        var totalPrice = (movieService.getMovieChooseForOrder().seats.length) * 10;
         $scope.cart.forEach(function (product) {
             totalPrice += product.price * product.quantity;
         });
@@ -49,7 +47,22 @@ app.controller('cafeteriaCtl', ['$scope','cafeteriaService', 'movieService', '$l
     };
 
     $scope.goToPayment = function () {
-        cafeteriaService.setCart($scope.cart);
+
+        userService.setUserCart(angular.extend(
+                {
+                    movieOrder: movieService.getMovieChooseForOrder()
+                },
+                {
+                    cafeteria: $scope.cart
+                },
+                {
+                    totalPrice: $scope.getCartPrice()
+                }
+        ));
+
+        console.log("goToPayment $scope.cart:");
+        console.log(userService.getUserCart());
+
         $location.path('/orderSummary').replace();
     };
 

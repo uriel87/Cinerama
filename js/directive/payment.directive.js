@@ -9,29 +9,27 @@
  *
  ******************************/
 
-app.directive('payment',['cafeteriaService', function (cafeteriaService) {
+app.directive('payment',['movieService', 'cafeteriaService', function (movieService, cafeteriaService) {
     return {
         restrict: 'E',
         replace: true,
         templateUrl: '../views/templates/payment.html',
         transclude: true,
-        scope: {
-            // showUserNav: '='
-        },
         link: function(scope, element, attributes) {
 
             element.addClass('movie-payment');
 
-            // scope.userDetails = userService.getUser();
-            // scope.logOut = function() {
-            //     facebookApiService.logOut();
-            //     console.log("logOut");
-            // };
-            // element.addClass('menu');
+            cafeteriaService.getCreditCards().then(function(data){
+                scope.creditCards = data
+                console.log("$scope.CreditCards: " + JSON.stringify(scope.creditCards));
+            });
+            
+            
+            // scope.pay = function () {
             //
-            // scope.toggleUserNav = function() {
-            //     scope.show = !scope.show;
             // }
+
+            
 
         }
     }

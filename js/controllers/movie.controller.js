@@ -103,7 +103,7 @@ app.controller('movieCtl', ['$scope', 'movieService','$location','$timeout', fun
 
     $scope.goToPaymentPage = function() {
         if($scope.requireInput) {
-            movieService.setMovieChoosenForOrder(angular.extend($scope.movieChoose, {seats: $scope.Userseats}));
+            movieService.setMovieChooseForOrder(angular.extend($scope.movieChoose, {seats: $scope.Userseats}));
             $location.path('/cafeteria').replace();
         }
     };

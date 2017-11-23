@@ -7,7 +7,7 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', fu
 
     this.movieList = null;
 
-    this.movieChoosenFoeOrder = null;
+    this.movieChooseForOrder = null;
 
     this.getCurrentMovie = function () {
         // if(!this.currentMovie) {
@@ -20,13 +20,13 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', fu
         this.currentMovie = movie;
     }
 
-    this.getmovieChoosenForOrder = function () {
-        return this.movieChoosenFoeOrder
+    this.getMovieChooseForOrder = function () {
+        return this.movieChooseForOrder
     }
 
-    this.setMovieChoosenForOrder = function (movie) {
-        this.movieChoosenFoeOrder = movie;
-        console.log(this.movieChoosenFoeOrder);
+    this.setMovieChooseForOrder = function (movie) {
+        this.movieChooseForOrder = movie;
+        console.log(this.movieChooseForOrder);
 
     }
 

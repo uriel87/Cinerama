@@ -28,8 +28,8 @@ app.config(["$routeProvider",'$locationProvider', function($routeProvider, $loca
             controller: 'cafeteriaCtl'
         })
         .when("/orderSummary", {
-            templateUrl: '../views/orderSummary.html'
-            // controller: 'paymentCtl'
+            templateUrl: '../views/orderSummary.html',
+            controller: 'orderSummaryCtl'
         })
         .when("/userMovieOrder", {
             templateUrl: '../views/userMovieOrder.html',

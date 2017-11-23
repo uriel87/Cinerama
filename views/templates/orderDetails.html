@@ -1,0 +1,23 @@
+
+
+<h2>order-details</h2>
+
+<p>movie: {{orderDetails.movieOrder._id.name}}</p>
+<p>cinema: {{orderDetails.movieOrder._id.cinema}}</p>
+<p>branch: {{orderDetails.movieOrder._id.branch}}</p>
+<p>auditorium: {{orderDetails.movieOrder._id.auditorium}}</p>
+<p>date: {{orderDetails.movieOrder._id.time.substring(0,10)}}</p>
+<p>time : {{orderDetails.movieOrder._id.time.substring(11,16)}}</p>
+
+<section class="seats-order" ng-repeat="seats in orderDetails.movieOrder.seats">
+    <p><span><strong>row: </strong>{{seats.row}} </span><span><strong>number: </strong>{{seats.number}}</span></p>
+</section>
+
+<section class="cafeteria-order">
+    <div ng-repeat="product in orderDetails.cafeteria">
+        <img src="{{product.image}}" alt="{{product.name}}"/>
+        <p><strong>name: </strong>{{product.name}}</p>
+        <p><strong>size: </strong>{{product.size}}</p>
+        <p><strong>quantity: </strong>{{product.quantity}}</p>
+    </div>
+</section>

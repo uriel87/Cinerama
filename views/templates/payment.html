@@ -25,9 +25,7 @@
                 <label>CVV</label>
                 <input type="text">
             </div>
-
-            <h3><strong>Total tickets: </strong>{{movie.seats.length}}</h3>
-            <button ng-click="sendOrderRequest()" type="submit" >Pay {{getCartPrice()}} <i class="fa fa-eur"></i></button>
+            <button ng-click="sendOrderRequest()" type="submit" >pay {{getCartPrice()}}</button>
 
         </form>
     </section>

@@ -447,7 +447,7 @@ a:hover {
   text-align: center; }
   .movie-payment h2 {
     text-transform: uppercase;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
     font-size: 4em; }
   .movie-payment form {
     margin: 2em auto; }
@@ -466,11 +466,11 @@ a:hover {
     .movie-payment form div {
       display: block;
       width: 20em;
-      margin: 1em auto; }
+      margin: 1.5em auto; }
       .movie-payment form div label {
         display: block;
         font-size: 17px;
-        color: #bfbfbf; }
+        color: #42464a; }
       .movie-payment form div input {
         display: block;
         width: 100%;
@@ -480,20 +480,22 @@ a:hover {
         border-bottom: 1px solid #42464a;
         background-color: transparent;
         outline: none;
-        transition: all .3s linear; }
+        transition: all .3s linear;
+        text-align: center; }
         .movie-payment form div input:focus {
           border-bottom: 1px solid #febd11; }
     .movie-payment form button {
-      width: 20em;
+      width: 15em;
       padding: .5em 0;
       background-color: #febd11;
       color: #42464a;
       border: none;
       outline: none;
-      margin: 2em auto;
+      margin: 1em auto;
       border-radius: 20px;
       font-weight: 700;
-      font-size: 1.5em; }
+      font-size: 1.5em;
+      text-transform: uppercase; }
 
 .cafeteria {
   padding: 2em 3em;

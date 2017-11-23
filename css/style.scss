@@ -586,6 +586,9 @@ a:hover {
 
   p{
     color: #ff0000;
+    position: absolute;
+    left: 0;
+    right: 0;
   }
 
   div {
@@ -693,45 +696,163 @@ a:hover {
 }
 
 
-
+.payment {
+  padding: 2em 3em;
+  margin: auto;
+  background-color: #bcbcbc;
+  text-align: center;
+}
 
 .movie-payment{
 
-    padding: 2em;
-    margin: auto;
+  padding-top: 4em;
 
-
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    font-size: 4em;
+  }
 
   form {
-    width: 90%;
     margin: 2em auto;
-    text-align: center;
 
     .creditcard-option {
       display: inline-block;
-      width: 10%;
+      width: 5em;
       margin: 0 2%;
 
-      input[type='radio'] {
-        margin-right: 1%;
-      }
-
-    }
-
-    div {
-      display: block;
-      width: 20%;
-      margin: 1em auto;
-
       label {
+
+        input[type='radio'] {
+          margin-right: 1%;
+        }
 
         img {
           width: 100%;
           height: auto;
         }
+
       }
+
+      h3 {
+        text-transform: capitalize;
+        margin-top: 2em;
+      }
+
+
+
     }
+
+    div {
+
+      display: block;
+      width: 20em;
+      margin: 1em auto;
+
+      label {
+        display: block;
+        font-size: 17px;
+        color: #bfbfbf;
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        color: #505050;
+        font-size: 1.5em;
+        border: 0;
+        border-bottom: 1px solid $background-color;
+        background-color: transparent;
+        outline: none;
+        transition: all .3s linear;
+
+        &:focus {
+          border-bottom: 1px solid $text-color;
+        }
+
+      }
+
+    }
+
+    button {
+      width: 20em;
+      padding: .5em 0;
+      background-color: $text-color;
+      color: $background-color;
+      border: none;
+      outline: none;
+      margin: 2em auto;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 1.5em;
+    }
+
   }
+}
+
+
+.cafeteria {
+
+  border-bottom: 1px solid $background-color;
+  padding-bottom: 4em;
+
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    font-size: 4em;
+  }
+
+  h3 {
+    text-transform: capitalize;
+  }
+
+  div {
+    position: relative;
+    display: inline-block;
+    width: 20em;
+    margin: 2em 1em;
+
+    span {
+      position: absolute;
+      right: 5.5em;
+      background-color: $text-color;
+      color: $background-color;
+      padding: .5em;
+      border-radius: 38px;
+      width: 3em;
+      height: 3em;
+      line-height: 2;
+      font-weight: 700;
+      top: .5em;
+    }
+
+    img {
+      width: 40%;
+      height: auto;
+    }
+
+    button {
+      width: 6em;
+      background-color: #42464a;
+      color: #febd11;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      font-size: 1.5em;
+    }
+
+      button:active {
+        background-color: #febd11;
+        color: #42464a;
+      }
+
+
+  }
+
+
+
+
+
 }
 
 

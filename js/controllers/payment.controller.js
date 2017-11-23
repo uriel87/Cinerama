@@ -16,8 +16,7 @@ app.controller('paymentCtl', ['$scope','paymentService', 'movieService', functio
         console.log("$scope.CreditCards: " + JSON.stringify($scope.creditCards));
     });
 
-    $scope.movie = movieService.getCurrentMovie();
-
+    $scope.movie = movieService.getmovieChoosenForOrder();
 
     $scope.cart = [];
 
@@ -34,21 +33,17 @@ app.controller('paymentCtl', ['$scope','paymentService', 'movieService', functio
         }
     };
 
-    // $scope.getCartPrice = function () {
-    //     var total = 0;
-    //     var ticktPrice = 0
-    //     if ($scope.Userseats.length) {
-    //         ticktPrice = $scope.Userseats.length * 40;
-    //     }
-    //     $scope.cart.forEach(function (product) {
-    //         total += product.price * product.quantity;
-    //     });
-    //     return total + ticktPrice;
-    // };
-
-    $scope.returnToOrder = function () {
-        $state.go('order' , {movie_name: $scope.movieDetails._id.name});
+    $scope.getCartPrice = function () {
+        var totalPrice = $scope.movie.seats.length * 10;
+        $scope.cart.forEach(function (product) {
+            totalPrice += product.price * product.quantity;
+        });
+        return totalPrice;
     };
+
+    // $scope.returnToOrder = function () {
+    //     $state.go('order' , {movie_name: $scope.movieDetails._id.name});
+    // };
 
 
 

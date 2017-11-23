@@ -59,6 +59,7 @@ app.controller('movieCtl', ['$scope', 'movieService','$location','$timeout', fun
     }
 
     $scope.setCurrentMovie = function (currentBranch) {
+        $scope.Userseats = [];
         $scope.CurrentBranch = [];
         for (var i = 0; i < $scope.movieCineramaDetails.length; i++) {
             if( ($scope.movieCineramaDetails[i]._id.branch == currentBranch._id.branch) && ($scope.movieCineramaDetails[i]._id.cinema == currentBranch._id.cinema)) {
@@ -69,7 +70,10 @@ app.controller('movieCtl', ['$scope', 'movieService','$location','$timeout', fun
     }
 
     $scope.movieChooseByTime = function(movieChoose) {
+        $scope.Userseats = [];
         $scope.movieChoose = movieChoose;
+        console.log($scope.movieChoose);
+
     };
 
     $scope.setSeat = function(seats, isChecked) {
@@ -84,7 +88,8 @@ app.controller('movieCtl', ['$scope', 'movieService','$location','$timeout', fun
             var index = $scope.Userseats.indexOf(seats);
             $scope.Userseats.splice(index, 1);
             console.log($scope.Userseats);
-            if(!angular.equals($scope.Userseats), {}){
+            // if(!angular.equals({}, $scope.Userseats)){
+            if($scope.Userseats.length < 1){
                 $scope.requireInput = false;
             }
             console.log("$scope.requireInput: " + $scope.requireInput);
@@ -98,7 +103,7 @@ app.controller('movieCtl', ['$scope', 'movieService','$location','$timeout', fun
 
     $scope.goToPaymentPage = function() {
         if($scope.requireInput) {
-            movieService.setMovieChoosenForOrder(angular.extend($scope.movieChoose, $scope.Userseats));
+            movieService.setMovieChoosenForOrder(angular.extend($scope.movieChoose, {seats: $scope.Userseats}));
             $location.path('/payment').replace();
         }
     };

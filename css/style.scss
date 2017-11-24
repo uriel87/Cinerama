@@ -30,6 +30,33 @@ a:hover {
 }
 
 
+
+.show-product {
+  position: relative;
+  display: inline-block;
+  width: 12em;
+  margin: 2em 1em;
+  text-align: center;
+
+    span {
+      position: absolute;
+      right: 2.5em;
+      background-color: #febd11;
+      color: #42464a;
+      padding: .5em;
+      border-radius: 38px;
+      width: 3em;
+      height: 3em;
+      line-height: 2;
+    }
+
+    img {
+      width: 40%;
+      height: auto;
+    }
+}
+
+
 .menu {
   background-color: #42464a;
   color: #febd11;
@@ -812,29 +839,8 @@ a:hover {
   }
 
   div {
-    position: relative;
-    display: inline-block;
-    width: 20em;
-    margin: 2em 1em;
 
-    span {
-      position: absolute;
-      right: 5.5em;
-      background-color: $text-color;
-      color: $background-color;
-      padding: .5em;
-      border-radius: 38px;
-      width: 3em;
-      height: 3em;
-      line-height: 2;
-      font-weight: 700;
-      top: .5em;
-    }
-
-    img {
-      width: 40%;
-      height: auto;
-    }
+    @extend .show-product;
 
     button {
       width: 10em;
@@ -851,8 +857,6 @@ a:hover {
         background-color: #febd11;
         color: #42464a;
       }
-
-
   }
 
   button {
@@ -873,7 +877,66 @@ a:hover {
 }
 
 
-.orderDetails {
+.summery-order {
+
+  background-color: #bcbcbc;
+  padding: 2em;
+  height: auto;
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+
+
+  .movie-details-order, .seats-details-order{
+    float: left;
+    width: 50%;
+    padding: 2em;
+    text-transform: capitalize;
+
+    strong, span{
+      margin-right: .25em;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+  }
+
+
+  .cafeteria-details-order {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+
+    h3 {
+      text-align: center;
+      text-transform: capitalize;
+      margin-bottom: 1em;
+    }
+
+    h4 {
+      text-align: center;
+      text-transform: uppercase;
+      width: 15em;
+      margin: 1em auto;
+      background-color: $text-color;
+      color: $background-color;
+      padding: 1em;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    div {
+      @extend .show-product;
+    }
+  }
+
+
 
 }
 

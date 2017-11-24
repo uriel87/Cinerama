@@ -1,23 +1,43 @@
 
 
-<h2>order-details</h2>
 
-<p>movie: {{orderDetails.movieOrder._id.name}}</p>
-<p>cinema: {{orderDetails.movieOrder._id.cinema}}</p>
-<p>branch: {{orderDetails.movieOrder._id.branch}}</p>
-<p>auditorium: {{orderDetails.movieOrder._id.auditorium}}</p>
-<p>date: {{orderDetails.movieOrder._id.time.substring(0,10)}}</p>
-<p>time : {{orderDetails.movieOrder._id.time.substring(11,16)}}</p>
+<section class="summery-order">
 
-<section class="seats-order" ng-repeat="seats in orderDetails.movieOrder.seats">
-    <p><span><strong>row: </strong>{{seats.row}} </span><span><strong>number: </strong>{{seats.number}}</span></p>
+    <h2>order details</h2>
+
+    <section class="movie-details-order">
+        <h3>movie</h3>
+        <p><strong>movie:</strong>{{orderDetails.movieOrder._id.name}}</p>
+        <p><strong>cinema:</strong>{{orderDetails.movieOrder._id.cinema}}</p>
+        <p><strong>branch:</strong>{{orderDetails.movieOrder._id.branch}}</p>
+        <p><strong>auditorium:</strong>{{orderDetails.movieOrder._id.auditorium}}</p>
+        <p><strong>date:</strong>{{orderDetails.movieOrder._id.time.substring(0,10)}}</p>
+        <p><strong>time:</strong>{{orderDetails.movieOrder._id.time.substring(11,16)}}</p>
+    </section>
+
+
+    <section class="seats-details-order" >
+        <h3>seats</h3>
+        <p ng-repeat="seats in orderDetails.movieOrder.seats"><strong>row:</strong><span>{{seats.row}}</span><span><strong>number:</strong>{{seats.number}}</span></p>
+    </section>
+
+
+    <section class="cafeteria-details-order">
+        <h3>cafeteria</h3>
+        <p ng-show="orderDetails.cafeteria.length < 1">products have not selected</p>
+        <div ng-repeat="product in orderDetails.cafeteria">
+            <span><strong>{{product.quantity}}</strong></span>
+            <img src="{{product.image}}" alt="{{product.name}}">
+            <p><strong>name:</strong>{{product.name}}</p>
+            <p><strong>size:</strong>{{product.size}}</p>
+        </div>
+
+        <h4>total price: {{orderDetails.totalPrice}} <i class="fa fa-eur"></i></h4>
+
+    </section>
+
+
+
 </section>
 
-<section class="cafeteria-order">
-    <div ng-repeat="product in orderDetails.cafeteria">
-        <img src="{{product.image}}" alt="{{product.name}}"/>
-        <p><strong>name: </strong>{{product.name}}</p>
-        <p><strong>size: </strong>{{product.size}}</p>
-        <p><strong>quantity: </strong>{{product.quantity}}</p>
-    </div>
-</section>
+

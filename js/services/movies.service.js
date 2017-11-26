@@ -202,6 +202,34 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', fu
     // });
 
 
+    this.sendMovieRequest = function () {
+
+        var movieRequest = userService.getUserCart();
+        for (var i = 0; i < movieRequest.movieOrder.seats.length; i++) {
+            var defer = $q.defer();
+
+            var orderUser = {
+                name: movieRequest.movieOrder._id.name,
+                date: movieRequest.movieOrder._id.time,
+                auditorium: movieRequest.movieOrder._id.auditorium,
+                cinema: movieRequest.movieOrder._id.cinema,
+                branch: movieRequest.movieOrder._id.branch,
+                row: movieRequest.movieOrder.seats[i].row,
+                number: movieRequest.movieOrder.seats[i].number,
+                email: userService.getUser().userEmail
+            }
+
+            $http.post("https://cineramaserver.herokuapp.com/setOrderMovie/", orderUser)
+                .then(function (response) {
+                    defer.resolve(response);
+                    console.log("-----sendMovieRequest-----: " + response);
+                });
+
+        }
+        return defer.promise;
+    }
+
+
 
 
 

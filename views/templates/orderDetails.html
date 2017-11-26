@@ -1,7 +1,7 @@
 
 
 
-<section class="summery-order">
+<!--<section class="summery-order">-->
 
     <h2>order details</h2>
 
@@ -15,29 +15,24 @@
         <p><strong>time:</strong>{{orderDetails.movieOrder._id.time.substring(11,16)}}</p>
     </section>
 
-
     <section class="seats-details-order" >
         <h3>seats</h3>
         <p ng-repeat="seats in orderDetails.movieOrder.seats"><strong>row:</strong><span>{{seats.row}}</span><span><strong>number:</strong>{{seats.number}}</span></p>
     </section>
 
-
-    <section class="cafeteria-details-order">
+    <section ng-if="orderDetails.cafeteria.length" class="cafeteria-details-order">
         <h3>cafeteria</h3>
-        <p ng-show="orderDetails.cafeteria.length < 1">products have not selected</p>
+        <!--<p>products have not selected</p>-->
         <div ng-repeat="product in orderDetails.cafeteria">
             <span><strong>{{product.quantity}}</strong></span>
             <img src="{{product.image}}" alt="{{product.name}}">
             <p><strong>name:</strong>{{product.name}}</p>
             <p><strong>size:</strong>{{product.size}}</p>
         </div>
-
-        <h4>total price: {{orderDetails.totalPrice}} <i class="fa fa-eur"></i></h4>
-
     </section>
 
+    <h4>total price: {{orderDetails.totalPrice}} <i class="fa fa-eur"></i></h4>
 
-
-</section>
+<!--</section>-->
 
 

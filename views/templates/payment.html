@@ -1,32 +1,32 @@
 
 
+<section>
+    <h2>payment</h2>
+    <form>
+        <div ng-repeat="card in creditCards" class="creditcard-option">
+            <label>
+                <input type="radio" name="creditCard" value="{{card.name}}">
+                <img src="{{card.image}}" alt="{{card.name}}">
+            </label>
+        </div>
 
-    <section>
-        <h2>payment</h2>
-        <form>
-            <div ng-repeat="card in creditCards" class="creditcard-option">
-                <label>
-                    <input type="radio" name="creditCard" value="{{card.name}}">
-                    <img src="{{card.image}}" alt="{{card.name}}">
-                </label>
-            </div>
+        <div>
+            <label>Credit number</label>
+            <input type="text">
+        </div>
 
-            <div>
-                <label>Credit number</label>
-                <input type="text">
-            </div>
+        <div>
+            <label>Exp. Date</label>
+            <input type="date">
+        </div>
 
-            <div>
-                <label>Exp. Date</label>
-                <input type="date">
-            </div>
+        <div>
+            <label>CVV</label>
+            <input type="text">
+        </div>
 
-            <div>
-                <label>CVV</label>
-                <input type="text">
-            </div>
-            <button ng-click="sendOrderRequest()" type="submit" >pay {{getCartPrice()}}</button>
+        <button ng-click="pay(); sendMovieRequest()" type="submit" >pay {{getCartPrice()}}</button>
 
-        </form>
-    </section>
+    </form>
+</section>
 

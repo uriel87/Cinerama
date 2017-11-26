@@ -557,10 +557,21 @@ a:hover {
 .summery-order {
   background-color: #bcbcbc;
   padding: 2em;
-  height: auto; }
+  display: block; }
   .summery-order h2 {
     text-align: center;
     text-transform: uppercase; }
+  .summery-order h4 {
+    text-align: center;
+    text-transform: uppercase;
+    width: 15em;
+    margin: 1em auto;
+    background-color: #febd11;
+    color: #42464a;
+    padding: 1em;
+    border-radius: 10px;
+    font-weight: 700;
+    clear: both; }
   .summery-order .movie-details-order, .summery-order .seats-details-order {
     float: left;
     width: 50%;
@@ -572,22 +583,12 @@ a:hover {
       text-align: center;
       margin-bottom: 1em; }
   .summery-order .cafeteria-details-order {
-    display: inline-block;
-    width: 100%;
+    clear: both;
+    margin: auto;
     text-align: center; }
     .summery-order .cafeteria-details-order h3 {
       text-align: center;
       text-transform: capitalize;
       margin-bottom: 1em; }
-    .summery-order .cafeteria-details-order h4 {
-      text-align: center;
-      text-transform: uppercase;
-      width: 15em;
-      margin: 1em auto;
-      background-color: #febd11;
-      color: #42464a;
-      padding: 1em;
-      border-radius: 10px;
-      font-weight: 700; }
 
 /*# sourceMappingURL=style.css.map */

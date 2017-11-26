@@ -11,6 +11,15 @@ app.controller('orderSummaryCtl', ['$scope','cafeteriaService', 'movieService', 
 
     $scope.movieOrderDetails = userService.getUserCart();
 
+    $scope.sendMovieRequest = function () {
+        movieService.sendMovieRequest().then(function(data){
+            console.log("orderSummaryCtl sendMovieRequest called: " + data);
+            $location.path('/main').replace();
+        });
+        // $location.path('/main').replace();
+    }
+
+
 }]);
 
 

@@ -17,8 +17,8 @@ app.directive('orderDetails',['movieService', 'cafeteriaService', function (movi
         },
         link: function(scope, element, attributes) {
 
-            // element.addClass('orderDetails');
-            
+            element.addClass('summery-order');
+
             // scope.pay = function () {
             //
             // }

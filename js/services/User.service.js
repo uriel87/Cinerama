@@ -77,7 +77,7 @@ app.service('userService', ['$http', '$cookies', '$q', function ($http, $cookies
         var defer = $q.defer();
 
         var query = {
-            name: this.getUser.userEmail
+            email: this.getUser.userEmail
         }
 
         $http.post("https://cineramaserver.herokuapp.com/getMovieUser/", query)

@@ -1,6 +1,10 @@
 
 app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', function ($http, userService, $q, $sce, $cookies) {
 
+    var url = "http://localhost:3000/";
+
+    // var url = "https://cineramaserver.herokuapp.com/";
+
     var thisService = this;
 
     this.currentMovie = null;
@@ -36,7 +40,7 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', fu
             name: movie
         }
 
-        return $http.post("https://cineramaserver.herokuapp.com/getMovie/", query)
+        return $http.post(url + "getMovie/", query)
             .then(function (response) {
                 // console.log("data-----: " + JSON.stringify(response.data));
                 return {
@@ -46,8 +50,7 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', fu
     };
 
     this.getAllMovie = function() {
-
-        return $http.post("https://cineramaserver.herokuapp.com/getAllMovies/")
+        return $http.post(url + "getAllMovies/")
             .then(function (response) {
                 return {
                     data: response.data
@@ -56,8 +59,7 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', fu
     };
 
     this.getMovieList = function() {
-
-        return $http.post("https://cineramaserver.herokuapp.com/getAllReviews")
+        return $http.post(url + "getAllReviews")
             .then(function (response) {
                 return {
                     data: response.data
@@ -71,7 +73,7 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', fu
         var movieList = $q.defer();
         var movieListTemp = [];
 
-        return $http.post("https://cineramaserver.herokuapp.com/getAllReviews")
+        return $http.post(url + "getAllReviews")
             .then(function(movieData) {
 
                 angular.forEach(movieData.data, function(value, key) {
@@ -80,7 +82,7 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', fu
                         name: value.name
                     }
 
-                    $http.post("https://cineramaserver.herokuapp.com/getMovie/", query)
+                    $http.post(url + "getMovie/", query)
                         .then(function(movieData) {
                             movieListTemp.push(movieData.data);
                         }), function error(err) {
@@ -96,94 +98,69 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', fu
 
 
     this.getMovieCineramaDetails = function (movie) {
-
-        console.log("getMovieCineramaDetails - movie: " + JSON.stringify(movie));
-
+        // console.log("getMovieCineramaDetails - movie: " + JSON.stringify(movie));
         var defer = $q.defer();
-
         var query = {
             name: movie
         }
-
-        $http.post("https://cineramaserver.herokuapp.com/getMovieDetails/", query)
+        $http.post(url + "getMovieDetails/", query)
             .then(function (response) {
                 // console.log("getMovieCineramaDetails - response.data: " + JSON.stringify(response.data));
                 defer.resolve(response.data);
             });
         return defer.promise;
-
     }
 
 
     this.getMovieTrailer = function (movie) {
-
-        console.log("in getMovieTrailer - movie: " + JSON.stringify(movie));
-
+        // console.log("in getMovieTrailer - movie: " + JSON.stringify(movie));
         var defer = $q.defer();
-
         var query = {
             name: movie
         }
-
-        $http.post("https://cineramaserver.herokuapp.com/getMovieTrailer/", query)
+        $http.post(url + "getMovieTrailer/", query)
             .then(function (response) {
                 var urltrailer = $sce.trustAsResourceUrl(response.data);
                 defer.resolve(urltrailer);
             });
         return defer.promise;
-
     }
 
 
     this.getMovieReview = function (movie) {
-
-        console.log("in getMovieReview - movie: " + JSON.stringify(movie));
-
+        // console.log("in getMovieReview - movie: " + JSON.stringify(movie));
         var defer = $q.defer();
-
         var query = {
             name: movie
         }
-
-        $http.post("https://cineramaserver.herokuapp.com/getMovieReview/", query)
+        $http.post(url + "getMovieReview/", query)
             .then(function (response) {
                 defer.resolve(response);
             });
         return defer.promise;
-
     }
 
 
 
 
     this.pushMovieReview = function (query) {
-
-        // var query = {
-        //     nameMovie: this.currentMovie,
-        //     userName: userService.getUser().name,
-        //     comment: comment,
-        //     review: review
-        // }
-
-        $http.post("https://cineramaserver.herokuapp.com/pushReview/", query)
+        var defer = $q.defer();
+        $http.post(url + "pushReview/", query)
             .then(function (response) {
-                // defer.resolve(response);
+                defer.resolve(response);
             });
+        return defer.promise;
     }
 
 
 
     this.getMoviesGeners = function () {
-
         var defer = $q.defer()
-
         $http.get("./data/movieGener.json")
             .then(function (response) {
                 defer.resolve(response);
             });
-
         return defer.promise;
-
     }
 
     this.putMovieCurrentCookies = function (movie){
@@ -205,10 +182,12 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', fu
     this.sendMovieRequest = function () {
 
         var movieRequest = userService.getUserCart();
+        console.log("****sendMovieRequest****: " + movieRequest);
+        console.log(movieRequest);
         for (var i = 0; i < movieRequest.movieOrder.seats.length; i++) {
             var defer = $q.defer();
-
             var orderUser = {
+                id: movieRequest.movieOrder._id.id,
                 name: movieRequest.movieOrder._id.name,
                 date: movieRequest.movieOrder._id.time,
                 auditorium: movieRequest.movieOrder._id.auditorium,
@@ -218,11 +197,12 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', fu
                 number: movieRequest.movieOrder.seats[i].number,
                 email: userService.getUser().userEmail
             }
-
-            $http.post("https://cineramaserver.herokuapp.com/setOrderMovie/", orderUser)
+            $http.post(url + "setOrderMovie/", orderUser)
                 .then(function (response) {
                     defer.resolve(response);
                     console.log("-----sendMovieRequest-----: " + response);
+                    console.log(response);
+
                 });
 
         }

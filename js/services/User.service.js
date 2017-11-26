@@ -1,6 +1,10 @@
 
 app.service('userService', ['$http', '$cookies', '$q', function ($http, $cookies, $q) {
 
+    var url = "http://localhost:3000/";
+
+    // var url = "https://cineramaserver.herokuapp.com/";
+
     this.putUserCookies = function (userName, userEmail, userPicture){
         $cookies.put('userName', userName);
         $cookies.put('userEmail', userEmail);
@@ -64,7 +68,7 @@ app.service('userService', ['$http', '$cookies', '$q', function ($http, $cookies
             birthday: userBirthday
         }
 
-        $http.post("https://cineramaserver.herokuapp.com/addUser", query)
+        $http.post(url + "addUser", query)
         .then(function(data) {
             console.log("addUserToDb - " + data);
         }), function error(err) {
@@ -77,10 +81,14 @@ app.service('userService', ['$http', '$cookies', '$q', function ($http, $cookies
         var defer = $q.defer();
 
         var query = {
-            email: this.getUser.userEmail
+            email: this.getUser().userEmail
         }
 
-        $http.post("https://cineramaserver.herokuapp.com/getMovieUser/", query)
+        console.log("query");
+        console.log(query);
+
+
+        $http.post(url + "getMovieUser/", query)
             .then(function (response) {
                 defer.resolve(response.data);
             });

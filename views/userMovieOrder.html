@@ -2,7 +2,30 @@
 
 <menu show-user-nav ></menu>
 
-<p>{{userMovies}}</p>
+<section class="wrapper-user-movie-review">
+
+<h1>User movie</h1>
+<p ng-if="userMovies == false">movies have not order yet</p>
+
+    <section class="user-movie-review" ng-if="userMovies">
+        <div ng-repeat="movie in userMovies" ng-click="gotToPushReview(movie)">
+            <p>{{movie._id.name}}</p>
+            <p>{{movie._id.cinema}} {{movie._id.branch}}</p>
+            <p>{{movie._id.time.substring(0,10)}}</p>
+            <!--<button ng-click="gotToPushReview(movie)">add review</button>-->
+            <form>
+                <h3>Add your comment</h3>
+                <textarea id="commentUser" ng-model="commentUser"></textarea>
+                <h4>click on your comment</h4>
+                <button ng-click="pushMovieReview(movie._id, 'lame', commentUser)">lame</button>
+                <button ng-click="pushMovieReview(movie._id, 'wtf', commentUser)" >wtf</button>
+                <button ng-click="pushMovieReview(movie._id, 'wow', commentUser)" >wow</button>
+                <button ng-click="pushMovieReview(movie._id, 'nice', commentUser)" >nice</button>
+            </form>
+        </div>
+    </section>
+
+</section>
 
 <footer-movie></footer-movie>
 

@@ -3,6 +3,10 @@
 
 app.service('cafeteriaService', ['$http','$q', function ($http, $q) {
 
+    var url = "http://localhost:3000/";
+
+    // var url = "https://cineramaserver.herokuapp.com/";
+
     // this.cart = [];
     //
     // this.setUserCart = function (cart) {
@@ -27,7 +31,7 @@ app.service('cafeteriaService', ['$http','$q', function ($http, $q) {
 
         var defer = $q.defer();
 
-        $http.post("https://cineramaserver.herokuapp.com/getAllProduct/")
+        $http.post(url + "getAllProduct/")
             .then(function (response) {
                 defer.resolve(response.data);
             });

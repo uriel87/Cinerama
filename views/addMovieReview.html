@@ -2,7 +2,15 @@
 
 <menu show-user-nav ></menu>
 
-<p>add movie review</p>
+<form>
+    <h3>Add your comment</h3>
+    <textarea id="commentUser" ng-model="commentUser"></textarea>
+    <h4>How was it?</h4>
+    <butten><img src="../images/lamePushReview.png" ng-click="pushMovieReview('lame', commentUser)" alt="lame"></butten>
+    <butten><img src="../images/WtfPushReview.png" ng-click="pushMovieReview('wtf', commentUser)" alt="Wtf"></butten>
+    <butten><img src="../images/wowPushReview.png" ng-click="pushMovieReview('wow', commentUser)" alt="wow"></butten>
+    <butten><img src="../images/nicePushReview.png" ng-click="pushMovieReview('nice', commentUser)" alt="nice"></butten>
+</form>
 
 <footer-movie></footer-movie>
 

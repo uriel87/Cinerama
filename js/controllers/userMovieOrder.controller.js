@@ -20,14 +20,6 @@ app.controller('userMovieOrderCtl', ['$scope','userService', 'movieService', '$l
             review: review
         }
 
-        // console.log("query: " + query)
-        // console.log(query)
-        //
-        // console.log("userService.getUser(): " + userService.getUser())
-        // console.log(userService.getUser())
-
-
-
         movieService.pushMovieReview(query).then(function(data){
             console.log("pushMovieReview() response: " + JSON.stringify(data))
             // $scope.movieToPushReview = movieService.setCurrentMovieToPushReview(null);

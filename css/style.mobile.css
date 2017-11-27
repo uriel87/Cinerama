@@ -1,0 +1,73 @@
+@media screen and (max-width: 42.5em) {
+  .menu {
+    position: sticky;
+    width: 100%;
+    grid-template-columns: 45% 45% 10%;
+    z-index: 1;
+    top: 0; }
+    .menu #menu-btn {
+      display: block;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      font-size: 3em; }
+    .menu .show-nav-mobile {
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%); }
+    .menu nav {
+      position: fixed;
+      right: 0;
+      text-align: center;
+      top: 5.5em;
+      background: #42464a;
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      z-index: 1;
+      width: 100%;
+      transition: all 0.1s; }
+      .menu nav ul li {
+        position: relative;
+        float: none;
+        border-bottom: 1px solid #bcbcbc; }
+    .menu #user-navigation nav {
+      right: 44.5%;
+      transition: all 0.1s; }
+
+  .footer-movie {
+    display: inherit;
+    padding: 0 7%;
+    text-align: center; }
+    .footer-movie section {
+      margin: 0;
+      padding: 1em; }
+    .footer-movie .company-details, .footer-movie .company-menu, .footer-movie section h3 {
+      display: none; }
+    .footer-movie .company-social {
+      justify-self: center; }
+      .footer-movie .company-social ul li {
+        float: none;
+        display: inline-block; }
+    .footer-movie p {
+      padding: 1em;
+      margin: 0; }
+
+  .moviesPage .movie-list-wrapper .movie-list {
+    margin: 1.5em; }
+
+  .wrapper-user-movie-review {
+    padding: 3em 0; }
+
+  .moviePage {
+    padding: .5em; }
+
+  .cafeteria, .summery-order {
+    padding: 1em 0em; }
+    .cafeteria .cafeteria-details-order div, .summery-order .cafeteria-details-order div {
+      margin: 2em 1em; } }
+@media screen and (max-width: 42.5em) and (min-width: 65em) {
+  .moviePage .imdb-rating {
+    display: none; }
+  .moviePage .movie-data-general p:last-child {
+    display: block; } }
+
+/*# sourceMappingURL=style.mobile.css.map */

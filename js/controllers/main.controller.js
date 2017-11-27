@@ -11,24 +11,6 @@ app.controller('mainCtl', ['$scope', 'movieService','$timeout', function ($scope
             return err;
         }
     };
-
-    // $scope.movieList = [];
-    // movieService.getMovieList()
-    //     .then(function(movieData) {
-    //
-    //         angular.forEach(movieData.data, function(value, key) {
-    //             return movieService.getMovie(value.name)
-    //                 .then(function(movieData) {
-    //                     console.log("movieData: " + JSON.stringify(movieData));
-    //                     $scope.movieList.push(movieData.data);
-    //                 }), function error(err) {
-    //                 return err;
-    //             }
-    //
-    //         });
-    //     }), function error(err) {
-    //     return err;
-    // };
     
     movieService.getAllMovie()
         .then(function(moviesData) {

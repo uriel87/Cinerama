@@ -72,6 +72,10 @@ a:hover {
     width: 100%;
   }
 
+  button {
+    display: none;
+  }
+
   nav {
     justify-self: end;
     line-height: 5em;
@@ -82,7 +86,7 @@ a:hover {
 
     li{
       float: left;
-      margin: 0 2em;
+      margin: 0 1em;
       text-transform: uppercase;
       cursor: pointer;
 
@@ -112,7 +116,7 @@ a:hover {
       position: absolute;
       top: 6.3em;
       background-color: #42464a;
-      right: 2.1em;
+      right: 3%;
       width: 14em;
       text-align: center;
       max-height: 999px;
@@ -303,7 +307,6 @@ a:hover {
     border-top: 1px solid #cbcbcb;
     width: 100%;
     text-align: center;
-    box-shadow: 0px -1px 0px #000;
   }
 
 
@@ -435,7 +438,7 @@ a:hover {
   background-color: #e2e2e2;
   color: #42464a;
   padding: 1em 10% 10em;
-  height: 35em;
+  height: 40em;
 
   h1 {
     text-align: center;
@@ -548,6 +551,10 @@ a:hover {
       margin: .5em 1.5em;
       align-self: end;
 
+      p:last-child {
+        display: none;
+      }
+
       p{
         grid: none;
         margin: 0;
@@ -562,7 +569,7 @@ a:hover {
     }
 
     .imdb-rating {
-      grid-area: 2/3/3/4;
+      grid-area: 2/3/3/5;
       justify-self: end;
     }
 
@@ -897,8 +904,8 @@ a:hover {
     text-transform: uppercase;
     width: 15em;
     margin: 1em auto;
-    background-color: $text-color;
-    color: $background-color;
+    background-color: $background-color;
+    color: $text-color;
     padding: 1em;
     border-radius: 10px;
     font-weight: 700;

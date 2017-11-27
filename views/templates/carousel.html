@@ -3,11 +3,9 @@
 <article class="wrapper-carousel">
     <article class="movies-carousel">
         <section class="slide">
-            <section ng-repeat="movie in moviesInfo" ng-click="goToMoviePage(movie)" >
+            <section ng-repeat="movie in moviesInfo | limitTo:10" ng-click="goToMoviePage(movie)" >
                 <img src="{{movie.poster}}" alt="{{movie.title}}">
             </section>
         </section>
     </article>
 </article>
-
-<!--| limitTo:10-->

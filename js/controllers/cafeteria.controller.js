@@ -19,9 +19,13 @@ app.controller('cafeteriaCtl', ['$scope','cafeteriaService', 'movieService', 'us
     });
 
     $scope.addToCart = function (product) {
+        console.log("product: " + JSON.stringify(product));
+        console.log(product);
+
+
         var found = false;
         $scope.cart.forEach(function (item) {
-            if (item._id == product._id) {
+            if (item.id == product.id) {
                 item.quantity++;
                 found = true;
             }

@@ -1,0 +1,162 @@
+
+
+$primary-color: #febd11;
+$secondary-color: #42464a;
+$tertiary: #bcbcbc;
+
+
+
+//.show-nav-li {
+//    float: none;
+//    border-bottom: 1px solid $tertiary;
+//    overflow: auto;
+//    height: auto;
+//    transition: all 0.3s linear;
+//}
+
+
+
+@media screen and (max-width: 42.5em) {
+
+
+
+    .menu {
+        position: sticky;
+        width: 100%;
+        grid-template-columns: 45% 45% 10%;
+        z-index: 1;
+        top: 0;
+
+        #menu-btn {
+            display: block;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-size: 3em;
+        }
+
+        .show-nav-mobile {
+            -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+        }
+
+        nav {
+            position: fixed;
+            right: 0;
+            text-align: center;
+            top: 5.5em;
+            background: $secondary-color;
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            z-index: 1;
+            width: 100%;
+            transition: all 0.1s;
+
+            ul {
+                li {
+                    position: relative;
+                    float: none;
+                    border-bottom: 1px solid $tertiary;
+                }
+            }
+        }
+
+        #user-navigation {
+
+            nav {
+                right: 44.5%;
+                transition: all 0.1s;
+            }
+        }
+    }
+
+
+
+
+    .footer-movie {
+        display: inherit;
+        padding: 0 7%;
+        text-align: center;
+
+        section {
+            margin: 0;
+            padding: 1em;
+        }
+
+        .company-details, .company-menu , section h3 {
+            display: none;
+        }
+
+        .company-social {
+
+            justify-self: center;
+
+            ul {
+
+                li {
+                    float: none;
+                    display: inline-block;
+                }
+            }
+        }
+
+        p {
+            padding: 1em;
+            margin: 0;
+        }
+
+
+    }
+
+    .moviesPage {
+        .movie-list-wrapper{
+            .movie-list {
+                margin: 1.5em;
+            }
+        }
+    }
+
+    .wrapper-user-movie-review {
+        padding: 3em 0;
+    }
+
+    .moviePage {
+        padding: .5em;
+    }
+
+    .cafeteria, .summery-order {
+        padding: 1em 0em;
+
+        .cafeteria-details-order {
+
+            div {
+                margin: 2em 1em;
+            }
+        }
+    }
+
+}
+
+
+
+@media screen and (max-width: 42.5em) and (min-width: 65em ) {
+
+    .moviePage {
+
+        .imdb-rating {
+            display: none;
+        }
+
+        .movie-data-general {
+
+            p:last-child {
+                display: block;
+            }
+
+        }
+
+    }
+}
+
+
+

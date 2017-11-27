@@ -4,6 +4,7 @@
     <a href="#" id="logo"></a>
     <nav>
         <ul>
+            <li><a href="#">home</a></li>
             <li><a href="/#/movies">movie</a></li>
             <li><a href="/#/about">about</a></li>
             <li><a href="/#/contactUs">contact us</a></li>
@@ -11,7 +12,7 @@
     </nav>
     <section id="user-navigation">
         <img src="{{userDetails.userPicture}}" title="{{userDetails.userName}}" ng-click="toggleUserNav()"/>
-        <nav ng-if="show">
+        <nav ng-if="showUserNav">
             <ul>
                 <li><i class="fa fa-film"></i><a href="/#/userMovieOrder">my orders</a></li>
                 <li><i class="fa fa-cog"></i><a href="">settings</a></li>
@@ -19,4 +20,5 @@
             </ul>
         </nav>
     </section>
+    <button id="menu-btn" ng-click="toggleMainNav()"><i class="fa fa-bars"></i></button>
 </article>

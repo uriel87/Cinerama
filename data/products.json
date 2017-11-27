@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "popcorn",
+        "size": "L",
+        "price": 7,
+        "image": "./images/Lpopcorn.png"
+    },
+    {
+        "id": 2,
+        "name": "coca cola",
+        "size": "S",
+        "price": 3,
+        "image": "./images/Scola.png"
+    },
+    {
+        "id": 3,
+        "name": "popcorn",
+        "size": "S",
+        "price": 3,
+        "image": "./images/Spopcorn.png"
+    },
+    {
+        "id": 4,
+        "name": "popcorn",
+        "size": "M",
+        "price": 5,
+        "image": "./images/Lpopcorn.png"
+    },
+    {
+
+        "id": 5,
+        "name": "coca cola",
+        "size": "M",
+        "price": 4,
+        "image": "./images/Lcola.png"
+    },
+    {
+        "id": 6,
+        "name": "coca cola",
+        "size": "L",
+        "price": 5,
+        "image": "./images/Lcola.png"
+    },
+    {
+        "id": 7,
+        "name": "m&m",
+        "price": 2,
+        "image": "./images/m&m.png"
+    },
+    {
+        "id": 8,
+        "name": "combine",
+        "size": "M",
+        "price": 14,
+        "image": "./images/combine.png"
+    },
+    {
+        "id": 9,
+        "name": "combine",
+        "size": "S",
+        "price": 12,
+        "image": "./images/combine.png"
+    },
+    {
+        "id": 10,
+        "name": "combine",
+        "size": "L",
+        "price": 16,
+        "image": "./images/combine.png"
+    }
+]

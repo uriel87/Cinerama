@@ -35,10 +35,6 @@ app.config(["$routeProvider",'$locationProvider', function($routeProvider, $loca
             templateUrl: '../views/userMovieOrder.html',
             controller: 'userMovieOrderCtl'
         })
-        .when("/addMovieReview", {
-            templateUrl: '../views/addMovieReview.html',
-            controller: 'addMovieReviewCtl'
-        })
         .when("/about", {
             templateUrl: '../views/about.html'
         })

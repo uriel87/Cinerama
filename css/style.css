@@ -47,6 +47,8 @@ a:hover {
     background-repeat: no-repeat;
     height: 5em;
     width: 100%; }
+  .menu button {
+    display: none; }
   .menu nav {
     justify-self: end;
     line-height: 5em; }
@@ -54,7 +56,7 @@ a:hover {
       margin: auto; }
     .menu nav li {
       float: left;
-      margin: 0 2em;
+      margin: 0 1em;
       text-transform: uppercase;
       cursor: pointer; }
       .menu nav li a,
@@ -75,7 +77,7 @@ a:hover {
       position: absolute;
       top: 6.3em;
       background-color: #42464a;
-      right: 2.1em;
+      right: 3%;
       width: 14em;
       text-align: center;
       max-height: 999px;
@@ -190,8 +192,7 @@ a:hover {
     padding: 2em 0 0;
     border-top: 1px solid #cbcbcb;
     width: 100%;
-    text-align: center;
-    box-shadow: 0px -1px 0px #000; }
+    text-align: center; }
 
 .moviesPage {
   margin: 0 auto;
@@ -275,7 +276,7 @@ a:hover {
   background-color: #e2e2e2;
   color: #42464a;
   padding: 1em 10% 10em;
-  height: 35em; }
+  height: 40em; }
   .about h1 {
     text-align: center;
     margin: 1em 0;
@@ -353,6 +354,8 @@ a:hover {
       grid-area: 2/2/3/4;
       margin: .5em 1.5em;
       align-self: end; }
+      .moviePage .movie-data .movie-data-general p:last-child {
+        display: none; }
       .moviePage .movie-data .movie-data-general p {
         grid: none;
         margin: 0; }
@@ -360,7 +363,7 @@ a:hover {
           margin-right: .5em;
           text-transform: capitalize; }
     .moviePage .movie-data .imdb-rating {
-      grid-area: 2/3/3/4;
+      grid-area: 2/3/3/5;
       justify-self: end; }
   .moviePage .movie-review {
     border-bottom: 1px solid #42464a;
@@ -568,8 +571,8 @@ a:hover {
     text-transform: uppercase;
     width: 15em;
     margin: 1em auto;
-    background-color: #febd11;
-    color: #42464a;
+    background-color: #42464a;
+    color: #febd11;
     padding: 1em;
     border-radius: 10px;
     font-weight: 700;

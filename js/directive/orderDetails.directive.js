@@ -19,10 +19,6 @@ app.directive('orderDetails',['movieService', 'cafeteriaService', function (movi
 
             element.addClass('summery-order');
 
-            // scope.pay = function () {
-            //
-            // }
-
         }
     }
 }]);

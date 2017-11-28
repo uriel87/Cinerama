@@ -2,50 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a05826d-ffc7-4825-93e9-758d9fb654c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/style.mobile.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/products.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/WtfPushReview.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/bBox.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/bgOrders.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/bgPushReview.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/boxes.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/enjoy.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/enjoy2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/gBox.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/lamePushReview.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/loading.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/masterCard.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/nicePushReview.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/pBox.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/qrB.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/qrBl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/qrR.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/rBox.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/recB.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/recG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/recR.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/wowPushReview.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/controllers/addMovieReview.controller.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/addMovieReview.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css.map" afterPath="$PROJECT_DIR$/css/style.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.scss" afterPath="$PROJECT_DIR$/css/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/cafeteria.controller.js" afterPath="$PROJECT_DIR$/js/controllers/cafeteria.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/main.controller.js" afterPath="$PROJECT_DIR$/js/controllers/main.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/userMovieOrder.controller.js" afterPath="$PROJECT_DIR$/js/controllers/userMovieOrder.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/directive/menu.directive.js" afterPath="$PROJECT_DIR$/js/directive/menu.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/directive/orderDetails.directive.js" afterPath="$PROJECT_DIR$/js/directive/orderDetails.directive.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/routes.js" afterPath="$PROJECT_DIR$/js/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/services/cafeteria.service.js" afterPath="$PROJECT_DIR$/js/services/cafeteria.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/services/movies.service.js" afterPath="$PROJECT_DIR$/js/services/movies.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/movie.html" afterPath="$PROJECT_DIR$/views/movie.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/movies.html" afterPath="$PROJECT_DIR$/views/movies.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/templates/carousel.html" afterPath="$PROJECT_DIR$/views/templates/carousel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/templates/menu.html" afterPath="$PROJECT_DIR$/views/templates/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/templates/orderDetails.html" afterPath="$PROJECT_DIR$/views/templates/orderDetails.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.mobile.css.map" afterPath="$PROJECT_DIR$/css/style.mobile.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.mobile.scss" afterPath="$PROJECT_DIR$/css/style.mobile.scss" />
     </list>
     <ignored path="cinerama.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,8 +31,8 @@
           <file leaf-file-name="menu.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/views/templates/menu.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+                <state relative-caret-position="272">
+                  <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
@@ -148,8 +107,8 @@
           <file leaf-file-name="style.mobile.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/style.mobile.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="329">
-                  <caret line="119" column="23" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
+                <state relative-caret-position="510">
+                  <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
@@ -239,10 +198,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1358" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -446,6 +405,7 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\bin\node.exe" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/urielChechique" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -510,7 +470,7 @@
       <workItem from="1511015062400" duration="134572000" />
       <workItem from="1511354891618" duration="8313000" />
       <workItem from="1511369045729" duration="7679000" />
-      <workItem from="1511392174724" duration="130302000" />
+      <workItem from="1511392174724" duration="132870000" />
     </task>
     <task id="LOCAL-00001" summary="add structure">
       <created>1510316328326</created>
@@ -523,13 +483,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="457773000" />
+    <option name="totallyTimeSpent" value="460341000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16259168" sideWeight="0.4942717" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20121029" sideWeight="0.4942717" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33224222" sideWeight="0.5030257" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -944,18 +904,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/templates/menu.html">
+    <entry file="file://$PROJECT_DIR$/css/style.mobile.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        <state relative-caret-position="510">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.mobile.scss">
+    <entry file="file://$PROJECT_DIR$/views/templates/menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="119" column="23" selection-start-line="119" selection-start-column="23" selection-end-line="119" selection-end-column="23" />
+        <state relative-caret-position="272">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
           <folding />
         </state>
       </provider>

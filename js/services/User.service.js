@@ -1,9 +1,7 @@
 
 app.service('userService', ['$http', '$cookies', '$q', function ($http, $cookies, $q) {
 
-    var url = "http://localhost:3000/";
-
-    // var url = "https://cineramaserver.herokuapp.com/";
+    var url = "https://cinerama-server.herokuapp.com/";
 
     this.putUserCookies = function (userName, userEmail, userPicture){
         $cookies.put('userName', userName);
@@ -32,33 +30,6 @@ app.service('userService', ['$http', '$cookies', '$q', function ($http, $cookies
         return userDetails;
     }
 
-
-    // this.checkUserSignUp = function (userEmail) {
-    //
-    //     let userExist = false;
-    //
-    //     var query = {
-    //         email: userEmail
-    //     }
-    //
-    //     $http.post("https://cineramaserver.herokuapp.com/getUser", query)
-    //         .then(function(data) {
-    //             console.log("data in checkUserSignUp: " + JSON.stringify(data.data.email));
-    //             if(data.data.email.toString()) {
-    //                 console.log("data in checkUserSignUp in if: " + data.data.email);
-    //                 userExist = true;
-    //             }
-    //     }), function error(err) {
-    //         return err;
-    //     }
-    //
-    //     setTimeout(function() {
-    //         console.log("userExist: " + userExist);
-    //         return userExist;
-    //     }, 1000);
-    //
-    // }
-
     this.addUserToDb = function (userName, UserEmail, userPicture, userBirthday) {
 
         var query = {
@@ -70,7 +41,7 @@ app.service('userService', ['$http', '$cookies', '$q', function ($http, $cookies
 
         $http.post(url + "addUser", query)
         .then(function(data) {
-            console.log("addUserToDb - " + data);
+            // console.log("addUserToDb - " + data);
         }), function error(err) {
             return err;
         }
@@ -84,9 +55,7 @@ app.service('userService', ['$http', '$cookies', '$q', function ($http, $cookies
             email: this.getUser().userEmail
         }
 
-        console.log("query");
-        console.log(query);
-
+        // console.log(query);
 
         $http.post(url + "getMovieUser/", query)
             .then(function (response) {

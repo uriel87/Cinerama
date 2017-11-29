@@ -116,9 +116,49 @@ a:hover {
       .menu #user-navigation nav.ng-leave.ng-leave-active {
         opacity: 0; }
 
+.logIn-Page {
+  background-color: #42464a;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 45.5em;
+  padding: 15% 0; }
+  .logIn-Page img {
+    display: block;
+    margin: 0 auto 1em; }
+  .logIn-Page button {
+    background-color: #febd11;
+    border: none;
+    outline: none;
+    padding: 1em;
+    width: 15em;
+    color: #42464a;
+    border-radius: 50px;
+    font-size: 1em;
+    display: block;
+    margin: 0 auto 1em; }
+    .logIn-Page button i {
+      margin-right: .25em; }
+
+.header-main-page {
+  text-align: center;
+  margin: auto;
+  padding: 10em 6em;
+  text-transform: uppercase;
+  color: #febd11;
+  background-size: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/cinema.jpg) no-repeat;
+  background-size: 100%;
+  background-position-y: center; }
+  .header-main-page h1 {
+    font-size: 6em;
+    margin-bottom: .5em; }
+  .header-main-page h2 {
+    font-size: 3em; }
+
 .wrapper-carousel {
   background-color: #cbcbcb;
-  margin: 4em 0em; }
+  margin: 4em 0em;
+  min-height: 45em; }
   .wrapper-carousel .movies-carousel {
     max-width: 90%;
     padding: 2em 0em;
@@ -276,7 +316,7 @@ a:hover {
   background-color: #e2e2e2;
   color: #42464a;
   padding: 1em 10% 10em;
-  height: 40em; }
+  min-height: 45em; }
   .about h1 {
     text-align: center;
     margin: 1em 0;
@@ -285,7 +325,8 @@ a:hover {
 .contact-us {
   background-color: #e2e2e2;
   padding: 1em 10% 10em;
-  overflow: auto; }
+  overflow: auto;
+  min-height: 45em; }
   .contact-us h1 {
     text-align: center;
     margin: 1em;
@@ -311,6 +352,7 @@ a:hover {
       padding: 0.7em 0;
       font-size: 15px;
       outline: none;
+      text-transform: uppercase;
       background: -webkit-linear-gradient(#908b8b 15%, #42464a 70%, #464444 15%);
       /* For Safari 5.1 to 6.0 */
       background: -o-linear-gradient(#908b8b 15%, #42464a 70%, #464444 15%);
@@ -330,12 +372,11 @@ a:hover {
 
 .moviePage {
   margin: auto;
-  padding: 5em;
+  padding: 2em;
   background-color: #cbcbcb; }
   .moviePage .movie-data {
     display: grid;
     grid-template-columns: 11em 8fr 3fr 2fr;
-    grid-auto-rows: 8em;
     margin: 3em 0;
     border-bottom: 1px solid #42464a;
     padding: 0 0 3em; }
@@ -364,7 +405,9 @@ a:hover {
           text-transform: capitalize; }
     .moviePage .movie-data .imdb-rating {
       grid-area: 2/3/3/5;
-      justify-self: end; }
+      justify-self: end;
+      top: 0.8em;
+      position: relative; }
   .moviePage .movie-review {
     border-bottom: 1px solid #42464a;
     overflow: auto; }
@@ -404,7 +447,7 @@ a:hover {
     .movieOrder div button {
       margin: .5em 1em;
       padding: 0.25em 1em;
-      width: 20em;
+      width: 18em;
       height: 3em;
       background-color: #42464a;
       border: .1em solid;
@@ -435,7 +478,7 @@ a:hover {
   .movieOrder button {
     display: block;
     margin: 2em auto;
-    width: 15em;
+    width: 12em;
     padding: .5em 0em;
     text-decoration: none;
     background: #febd11;
@@ -548,7 +591,7 @@ a:hover {
   .cafeteria button {
     display: block;
     margin: 2em auto;
-    width: 15em;
+    width: 12em;
     padding: .5em 0em;
     text-decoration: none;
     background: #febd11;
@@ -607,7 +650,8 @@ a:hover {
     margin-bottom: 1.5em; }
   .wrapper-user-movie-review .user-movie-review {
     margin: auto;
-    background-color: #bcbcbc; }
+    background-color: #bcbcbc;
+    min-height: 45em; }
     .wrapper-user-movie-review .user-movie-review div {
       display: inline-block;
       margin: 2em;

@@ -22,8 +22,6 @@ app.directive('menu',['userService', 'facebookApiService', '$location', function
 
             scope.userDetails = userService.getUser();
 
-            // scope.showUserNav = false;
-
             scope.logOut = function() {
                 facebookApiService.logOut();
                 console.log("logOut");
@@ -34,11 +32,10 @@ app.directive('menu',['userService', 'facebookApiService', '$location', function
                     $('.menu nav').removeClass("show-nav-mobile");
                 }
                 scope.showUserNav = !scope.showUserNav;
-                console.log("before scope.showUserNav : " + scope.showUserNav )
+                // console.log("before scope.showUserNav : " + scope.showUserNav )
             }
 
             scope.toggleMainNav = function() {
-                console.log("before scope.toggleMainNav : " + scope.showUserNav )
                 if(scope.showUserNav) {
                     scope.showUserNav = !scope.showUserNav;
                 }

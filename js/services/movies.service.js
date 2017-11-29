@@ -1,9 +1,9 @@
 
 app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', function ($http, userService, $q, $sce, $cookies) {
 
-    var url = "http://localhost:3000/";
+    // var url = "http://localhost:3000/";
 
-    // var url = "https://cineramaserver.herokuapp.com/";
+    var url = "https://cinerama-server.herokuapp.com/";
 
     var thisService = this;
 
@@ -30,7 +30,7 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', fu
 
     this.setMovieChooseForOrder = function (movie) {
         this.movieChooseForOrder = movie;
-        console.log(this.movieChooseForOrder);
+        // console.log(this.movieChooseForOrder);
 
     }
 
@@ -91,7 +91,7 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', fu
 
                 });
                 movieList.resolve(movieListTemp);
-                console.log("movieListTemp: " + movieListTemp)
+                // console.log("movieListTemp: " + movieListTemp)
                 return movieList.promise;
             })
     };
@@ -169,8 +169,7 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', fu
     this.sendMovieRequest = function () {
 
         var movieRequest = userService.getUserCart();
-        console.log("****sendMovieRequest****: " + movieRequest);
-        console.log(movieRequest);
+        // console.log(movieRequest);
         for (var i = 0; i < movieRequest.movieOrder.seats.length; i++) {
             var defer = $q.defer();
             var orderUser = {
@@ -187,9 +186,7 @@ app.service('movieService', ['$http', 'userService', '$q','$sce', '$cookies', fu
             $http.post(url + "setOrderMovie/", orderUser)
                 .then(function (response) {
                     defer.resolve(response);
-                    console.log("-----sendMovieRequest-----: " + response);
-                    console.log(response);
-
+                    // console.log(response);
                 });
 
         }

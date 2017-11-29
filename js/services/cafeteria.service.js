@@ -3,8 +3,6 @@
 
 app.service('cafeteriaService', ['$http','$q', function ($http, $q) {
 
-    var url = "http://localhost:3000/";
-
     this.getCafeteriaProducts = function () {
 
         var defer = $q.defer();

@@ -21,7 +21,7 @@ app.controller('mainCtl', ['$scope', 'movieService','$timeout', function ($scope
 
     movieService.movies().then(function(data){
         $scope.movieList = data
-        console.log("movieList(): " + JSON.stringify($scope.movieList))
+        // console.log("movieList(): " + JSON.stringify($scope.movieList))
     });
     
 

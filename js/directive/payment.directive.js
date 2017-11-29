@@ -23,7 +23,7 @@ app.directive('payment',['cafeteriaService', function (cafeteriaService) {
             element.addClass('movie-payment');
 
             scope.pay = function () {
-                console.log("pay function called");
+                // console.log("pay function called");
             }
 
         }

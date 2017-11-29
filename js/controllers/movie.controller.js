@@ -13,17 +13,17 @@ app.controller('movieCtl', ['$scope', 'movieService','$location','$timeout', fun
     $scope.movie = movieService.getCurrentMovie();
 
     movieService.getMovieCineramaDetails($scope.movie.title).then(function(data){
-        console.log("movieCtl.movieCineramaDetails: " + JSON.stringify(data))
+        // console.log("movieCtl.movieCineramaDetails: " + JSON.stringify(data))
         $scope.movieCineramaDetails = data
     });
 
     movieService.getMovieTrailer($scope.movie.title).then(function(data){
-        console.log("movieCtl.getMovieTrailer: " + JSON.stringify(data))
+        // console.log("movieCtl.getMovieTrailer: " + JSON.stringify(data))
         $scope.movieTrailer = data;
     });
 
     movieService.getMovieReview($scope.movie.title).then(function(data){
-        console.log("movieCtl.getMovieReview: " + JSON.stringify(data))
+        // console.log("movieCtl.getMovieReview: " + JSON.stringify(data))
         $scope.movieReview = data.data;
         $scope.lastCommentReview = $scope.movieReview[0].reviews[$scope.movieReview[0].reviews.length - 1];
     });
@@ -52,8 +52,8 @@ app.controller('movieCtl', ['$scope', 'movieService','$location','$timeout', fun
             widthRating = {
                 "width" : widthPrecetage + '%'
             }
-            console.log("$scope.getTotalReview(): " + $scope.getTotalReview());
-            console.log("widthRating: " + JSON.stringify(widthRating));
+            // console.log("$scope.getTotalReview(): " + $scope.getTotalReview());
+            // console.log("widthRating: " + JSON.stringify(widthRating));
             return widthRating
         //}, 50);
     }
@@ -66,13 +66,13 @@ app.controller('movieCtl', ['$scope', 'movieService','$location','$timeout', fun
                 $scope.CurrentBranch.push(angular.extend({}, $scope.movieCineramaDetails[i]));
             }
         }
-        console.log($scope.CurrentBranch);
+        // console.log($scope.CurrentBranch);
     }
 
     $scope.movieChooseByTime = function(movieChoose) {
         $scope.Userseats = [];
         $scope.movieChoose = movieChoose;
-        console.log($scope.movieChoose);
+        // console.log($scope.movieChoose);
 
     };
 
@@ -81,18 +81,17 @@ app.controller('movieCtl', ['$scope', 'movieService','$location','$timeout', fun
         if(isChecked) {
             $scope.Userseats.push(seats);
             $scope.requireInput = true;
-            console.log($scope.Userseats);
-            console.log("$scope.requireInput: " + $scope.requireInput);
+            // console.log($scope.Userseats);
+            // console.log("$scope.requireInput: " + $scope.requireInput);
 
         } else {
             var index = $scope.Userseats.indexOf(seats);
             $scope.Userseats.splice(index, 1);
-            console.log($scope.Userseats);
-            // if(!angular.equals({}, $scope.Userseats)){
+            // console.log($scope.Userseats);
             if($scope.Userseats.length < 1){
                 $scope.requireInput = false;
             }
-            console.log("$scope.requireInput: " + $scope.requireInput);
+            // console.log("$scope.requireInput: " + $scope.requireInput);
         }
 
     };

@@ -7,11 +7,11 @@ app.controller('userMovieOrderCtl', ['$scope','userService', 'movieService', '$l
 
     userService.getUserMoviesOrder().then(function(data){
         $scope.userMovies = data
-        console.log("userMovies(): " + JSON.stringify($scope.userMovies))
+        // console.log("userMovies(): " + JSON.stringify($scope.userMovies))
     });
 
     $scope.pushMovieReview = function (movie, review, comment) {
-        console.log("pushMovieReview() called" + JSON.stringify(movie))
+        // console.log("pushMovieReview() called" + JSON.stringify(movie))
 
         var query = {
             nameMovie: movie.name,
@@ -21,8 +21,7 @@ app.controller('userMovieOrderCtl', ['$scope','userService', 'movieService', '$l
         }
 
         movieService.pushMovieReview(query).then(function(data){
-            console.log("pushMovieReview() response: " + JSON.stringify(data))
-            // $scope.movieToPushReview = movieService.setCurrentMovieToPushReview(null);
+            // console.log("pushMovieReview() response: " + JSON.stringify(data))
             $location.path('/main').replace();
         });
 

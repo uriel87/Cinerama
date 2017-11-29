@@ -6,12 +6,10 @@ $tertiary: #bcbcbc;
 
 @media screen and (max-width: 42.5em) {
 
-
-
     .menu {
         position: sticky;
         width: 100%;
-        grid-template-columns: 45% 45% 10%;
+        grid-template-columns: 54% 30% 10%;
         z-index: 1;
         top: 0;
 
@@ -96,10 +94,38 @@ $tertiary: #bcbcbc;
 
     }
 
+
+    .header-main-page {
+        padding: 3em;
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1em;
+        }
+    }
+
+
     .moviesPage {
+
         .movie-list-wrapper{
             .movie-list {
                 margin: 1.5em;
+                width: 10em;
+            }
+        }
+    }
+
+    .moviePage {
+
+        .movie-review {
+
+            section {
+                float : none;
+                width: 100%;
+                margin: 0;
             }
         }
     }
@@ -112,13 +138,87 @@ $tertiary: #bcbcbc;
         padding: .5em;
     }
 
-    .cafeteria, .summery-order {
+    .summery-order, .cafeteria {
         padding: 1em 0em;
+    }
 
+    .cafeteria {
+        div {
+            width: 10em;
+        }
+    }
+
+
+    .summery-order {
         .cafeteria-details-order {
 
             div {
-                margin: 2em 1em;
+                width: 10em;
+            }
+        }
+    }
+
+    .contact-us {
+        padding: 0;
+
+        form, .address-about {
+            float: none;
+            margin: 0 auto 4em;
+            width: 90%;
+
+            button {
+                margin: auto;
+                display: block;
+                width: 18em;
+            }
+        }
+
+        p {
+            display: inline-block;
+            width: 45%;
+        }
+    }
+
+
+    .wrapper-user-movie-review {
+        .user-movie-review {
+            div {
+                margin: 1.5em auto;
+            }
+        }
+    }
+
+    .moviePage {
+        .movie-data {
+
+            grid-template-columns: 0;
+            padding: .5em;
+
+            h2 {
+                font-size: 22px;
+                margin: 0;
+            }
+
+            p {
+                margin: 3em auto;
+            }
+
+            img {
+                display: none;
+            }
+
+            .movie-data-general {
+                margin: 0;
+                padding-bottom: 2em;
+            }
+
+            .imdb-rating {
+                top: 0;
+
+                .c100 {
+                    font-size: 5em;
+                    top: .25em;
+                }
             }
         }
     }
@@ -127,22 +227,29 @@ $tertiary: #bcbcbc;
 
 
 
-@media screen and (max-width: 42.5em) and (min-width: 65em ) {
+@media screen and (min-width: 42.5em) and (max-width: 65em ) {
+
+    .header-main-page {
+        padding: 6em;
+
+        h1 {
+            font-size: 4em;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+    }
 
     .moviePage {
+        .movie-data {
 
-        .imdb-rating {
-            display: none;
-        }
+            grid-template-columns: 0;
 
-        .movie-data-general {
-
-            p:last-child {
-                display: block;
+            img {
+                display: none;
             }
-
         }
-
     }
 }
 

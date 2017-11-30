@@ -724,6 +724,7 @@ a:hover {
       input[type='checkbox'] {
         width: 2em;
         height: 2em;
+        margin: auto;
         background-color: $background-color;
         box-shadow: inset 0px 0px 200px 50px #9e9e9e, 0px 1px 10px #000;
       }
@@ -737,6 +738,21 @@ a:hover {
         box-shadow: inset 0px 0px 200px 50px $background-color, 0px 1px 10px #000;
       }
 
+  }
+
+  .auditorium {
+
+    h4 {
+      text-transform: uppercase;
+      margin: 1em auto;
+      font-size: 2em;
+    }
+
+    div {
+      display: inline-block;
+      width: 8vw;
+      margin: .25em auto;
+    }
   }
 
   button {

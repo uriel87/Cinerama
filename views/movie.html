@@ -75,9 +75,12 @@
             </div>
             <div class = "auditorium" ng-show="movieChoose">
                 <h3>pick your seats</h3>
-                <label>
-                    <input type="checkbox" ng-model="isChecked" ng-click = "setSeat(movieChoose._id.seats[$index], isChecked)" ng-disabled="movieChoose._id.seats[$index].occupied" class="seat" ng-repeat="seats in movieChoose._id.seats">{{movieChoose._id.seats[$index]}}
-                </label>
+                <h4>screen</h4>
+                <div ng-repeat="seats in movieChoose._id.seats">
+                    <label>
+                        <input type="checkbox" ng-model="isChecked" ng-click = "setSeat($parent.movieChoose._id.seats[$index], isChecked)" ng-disabled="$parent.movieChoose._id.seats[$index].occupied" class="seat">
+                    </label>
+                </div>
             </div>
             <button id="buyBtn" ng-click="goToPaymentPage()" type="submit"><strong>continue</strong></button>
         </form>

@@ -468,6 +468,7 @@ a:hover {
     .movieOrder div input[type='checkbox'] {
       width: 2em;
       height: 2em;
+      margin: auto;
       background-color: #42464a;
       box-shadow: inset 0px 0px 200px 50px #9e9e9e, 0px 1px 10px #000; }
     .movieOrder div input[type='checkbox']:checked {
@@ -475,6 +476,14 @@ a:hover {
       box-shadow: inset 0px 0px 200px 50px #febd11, 0px 1px 10px #000; }
     .movieOrder div input[type=checkbox][disabled] {
       box-shadow: inset 0px 0px 200px 50px #42464a, 0px 1px 10px #000; }
+  .movieOrder .auditorium h4 {
+    text-transform: uppercase;
+    margin: 1em auto;
+    font-size: 2em; }
+  .movieOrder .auditorium div {
+    display: inline-block;
+    width: 8vw;
+    margin: .25em auto; }
   .movieOrder button {
     display: block;
     margin: 2em auto;

@@ -81,7 +81,6 @@ app.controller('movieCtl', ['$scope', 'movieService','$location','$timeout', fun
         if(isChecked) {
             $scope.Userseats.push(seats);
             $scope.requireInput = true;
-            // console.log($scope.Userseats);
             // console.log("$scope.requireInput: " + $scope.requireInput);
 
         } else {
@@ -93,6 +92,7 @@ app.controller('movieCtl', ['$scope', 'movieService','$location','$timeout', fun
             }
             // console.log("$scope.requireInput: " + $scope.requireInput);
         }
+        console.log($scope.Userseats);
 
     };
 

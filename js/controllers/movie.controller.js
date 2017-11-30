@@ -92,7 +92,7 @@ app.controller('movieCtl', ['$scope', 'movieService','$location','$timeout', fun
             }
             // console.log("$scope.requireInput: " + $scope.requireInput);
         }
-        console.log($scope.Userseats);
+        // console.log($scope.Userseats);
 
     };
 

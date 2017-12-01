@@ -35,8 +35,9 @@ $tertiary: #bcbcbc;
         }
 
         .show-nav-mobile {
-            -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+            //-webkit-transform: translateX(0%);
+            //transform: translateX(0%);
+            @include translateX(0%);
         }
 
         nav {

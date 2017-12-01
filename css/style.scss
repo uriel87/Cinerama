@@ -951,7 +951,7 @@ a:hover {
         background-color: transparent;
         outline: none;
         //transition: all .3s linear;
-        @include transition(width, .3s , linear);
+        @include transition(all, .3s , linear);
 
         text-align: center;
 

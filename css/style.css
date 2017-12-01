@@ -620,9 +620,9 @@ a:hover {
         border-bottom: 1px solid #42464a;
         background-color: transparent;
         outline: none;
-        -webkit-transition: width 0.3s linear;
-        -moz-transition: width 0.3s linear;
-        transition: width 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        transition: all 0.3s linear;
         text-align: center; }
         .movie-payment form div input:focus {
           border-bottom: 1px solid #febd11; }

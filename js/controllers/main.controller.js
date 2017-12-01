@@ -55,7 +55,7 @@ app.controller('mainCtl', ['$scope', 'movieService','$timeout', function ($scope
                 }
             ]
         });
-    },2000);
+    },3000);
 
 }]);
 

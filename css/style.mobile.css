@@ -24,14 +24,18 @@
       transform: translateX(100%);
       z-index: 1;
       width: 100%;
-      transition: all 0.1s; }
+      -webkit-transition: all ease 0.1s;
+      -moz-transition: all ease 0.1s;
+      transition: all ease 0.1s; }
       .menu nav ul li {
         position: relative;
         float: none;
         border-bottom: 1px solid #bcbcbc; }
     .menu #user-navigation nav {
       right: 44.5%;
-      transition: all 0.1s; }
+      -webkit-transition: all ease 0.1s;
+      -moz-transition: all ease 0.1s;
+      transition: all ease 0.1s; }
 
   .footer-movie {
     display: inherit;
@@ -42,11 +46,9 @@
       padding: 1em; }
     .footer-movie .company-details, .footer-movie .company-menu, .footer-movie section h3 {
       display: none; }
-    .footer-movie .company-social {
-      justify-self: center; }
-      .footer-movie .company-social ul li {
-        float: none;
-        display: inline-block; }
+    .footer-movie .company-social ul li {
+      float: none;
+      display: inline-block; }
     .footer-movie p {
       padding: 1em;
       margin: 0; }

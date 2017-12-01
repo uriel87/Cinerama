@@ -27,6 +27,9 @@ a:hover {
     background-color: #febd11;
     color: #42464a;
     padding: .5em;
+    -webkit-border-radius: 38px;
+    -moz-border-radius: 38px;
+    -ms-border-radius: 38px;
     border-radius: 38px;
     width: 3em;
     height: 3em;
@@ -50,6 +53,9 @@ a:hover {
   .menu button {
     display: none; }
   .menu nav {
+    -webkit-justify-self: end;
+    -moz-justify-selff: end;
+    -ms-justify-self: end;
     justify-self: end;
     line-height: 5em; }
     .menu nav ul {
@@ -68,10 +74,16 @@ a:hover {
         color: inherit;
         text-decoration: none; }
   .menu #user-navigation {
+    -webkit-justify-self: end;
+    -moz-justify-selff: end;
+    -ms-justify-self: end;
     justify-self: end;
     line-height: 5em;
     margin-right: 2em; }
     .menu #user-navigation img {
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      -ms-border-radius: 25px;
       border-radius: 25px; }
     .menu #user-navigation nav {
       position: absolute;
@@ -86,6 +98,8 @@ a:hover {
         text-transform: capitalize;
         width: 100%;
         margin: 0;
+        -webkit-box-shadow: 0px 0px 1px #999999;
+        -moz-box-shadow: 0px 0px 1px #999999;
         box-shadow: 0px 0px 1px #999999; }
         .menu #user-navigation nav li:hover {
           background-color: #febd11;
@@ -108,12 +122,20 @@ a:hover {
         border-right: 8px solid transparent;
         bottom: 15em; }
       .menu #user-navigation nav.ng-animate {
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
         transition: all ease 0.5s; }
       .menu #user-navigation nav.ng-enter {
+        -moz-opacity: 0;
+        -khtml-opacity: 0;
         opacity: 0; }
       .menu #user-navigation nav.ng-leave, .menu #user-navigation nav.ng-enter.ng-enter-active {
+        -moz-opacity: 1;
+        -khtml-opacity: 1;
         opacity: 1; }
       .menu #user-navigation nav.ng-leave.ng-leave-active {
+        -moz-opacity: 0;
+        -khtml-opacity: 0;
         opacity: 0; }
 
 .logIn-Page {
@@ -132,6 +154,9 @@ a:hover {
     padding: 1em;
     width: 15em;
     color: #42464a;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
     border-radius: 50px;
     font-size: 1em;
     display: block;
@@ -165,6 +190,8 @@ a:hover {
     margin: auto; }
     .wrapper-carousel .movies-carousel .slide section {
       margin: 1em 3em;
+      -webkit-box-shadow: 10px 9px 20px #78736d;
+      -moz-box-shadow: 10px 9px 20px #78736d;
       box-shadow: 10px 9px 20px #78736d;
       cursor: pointer; }
       .wrapper-carousel .movies-carousel .slide section img {
@@ -178,6 +205,8 @@ a:hover {
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 25em 5em;
   border-top: 1px solid #cbcbcb;
+  -webkit-box-shadow: 0px -1px 0px #000;
+  -moz-box-shadow: 0px -1px 0px #000;
   box-shadow: 0px -1px 0px #000;
   padding: 0 7%;
   text-align: left; }
@@ -196,6 +225,9 @@ a:hover {
       margin-bottom: 1em;
       text-transform: capitalize; }
   .footer-movie .company-details {
+    -webkit-justify-self: center;
+    -moz-justify-selff: center;
+    -ms-justify-self: center;
     justify-self: center; }
     .footer-movie .company-details li {
       margin-bottom: 1.5em;
@@ -208,25 +240,39 @@ a:hover {
       .footer-movie .company-details li:nth-child(n+3) span:nth-child(3) {
         grid-area: 2/2/3/3; }
   .footer-movie .company-menu {
+    -webkit-justify-self: center;
+    -moz-justify-selff: center;
+    -ms-justify-self: center;
     justify-self: center; }
     .footer-movie .company-menu li {
       margin-bottom: 1.5em;
       text-transform: capitalize; }
   .footer-movie .company-social {
+    -webkit-justify-self: center;
+    -moz-justify-selff: center;
+    -ms-justify-self: center;
     justify-self: center; }
     .footer-movie .company-social li {
       float: left;
       margin-right: .5em;
       border: 1px solid;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
       border-radius: 20px;
       padding: .5em;
       width: 2.5em;
       text-align: center;
-      transition: all .4s; }
+      -webkit-transition: all ease 0.4s;
+      -moz-transition: all ease 0.4s;
+      transition: all ease 0.4s; }
       .footer-movie .company-social li:hover {
         background-color: #febd11;
         color: #42464a; }
   .footer-movie p {
+    -webkit-justify-self: center;
+    -moz-justify-selff: center;
+    -ms-justify-self: center;
     justify-self: center;
     grid-column: 1/4;
     padding: 2em 0 0;
@@ -258,7 +304,9 @@ a:hover {
       height: 3em;
       background-color: #42464a;
       border: .1em solid;
-      transition: all .8s;
+      -webkit-transition: all ease 0.9s;
+      -moz-transition: all ease 0.9s;
+      transition: all ease 0.9s;
       text-transform: capitalize; }
       .moviesPage form input::placeholder,
       .moviesPage form select::placeholder {
@@ -267,7 +315,9 @@ a:hover {
     .moviesPage form input:focus,
     .moviesPage form input:active,
     .moviesPage form input[placeholder]:focus {
-      transition: all .8s;
+      -webkit-transition: all ease 0.8s;
+      -moz-transition: all ease 0.8s;
+      transition: all ease 0.8s;
       background-color: #febd11;
       color: #42464a;
       outline: none;
@@ -281,10 +331,14 @@ a:hover {
     display: inline-block;
     width: 14em;
     margin: 2em;
-    box-shadow: 4px 4px 20px;
+    -webkit-box-shadow: 4px 4px 30px #000;
+    -moz-box-shadow: 4px 4px 30px #000;
+    box-shadow: 4px 4px 30px #000;
     padding: 0.2em 0.2em 0;
     background-color: #e2e2e2;
     cursor: pointer;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
     transition: all ease 0.5s; }
     .moviesPage .movie-list-wrapper .movie-list img {
       width: 100%;
@@ -300,7 +354,9 @@ a:hover {
       text-align: center;
       overflow: hidden;
       height: 0;
-      transition: all .4s; }
+      -webkit-transition: all ease 0.4s;
+      -moz-transition: all ease 0.4s;
+      transition: all ease 0.4s; }
       .moviesPage .movie-list-wrapper .movie-list .movie-details p i {
         font-size: 35px;
         margin-right: .25em; }
@@ -353,14 +409,7 @@ a:hover {
       font-size: 15px;
       outline: none;
       text-transform: uppercase;
-      background: -webkit-linear-gradient(#908b8b 15%, #42464a 70%, #464444 15%);
-      /* For Safari 5.1 to 6.0 */
-      background: -o-linear-gradient(#908b8b 15%, #42464a 70%, #464444 15%);
-      /* For Opera 11.1 to 12.0 */
-      background: -moz-linear-gradient(#908b8b 15%, #42464a 70%, #464444 15%);
-      /* For Firefox 3.6 to 15 */
-      background: linear-gradient(#908b8b 15%, #42464a 70%, #464444 15%);
-      /* Standard syntax */ }
+      background: #42464a; }
   .contact-us .address-about {
     float: left;
     margin: 0 5%;
@@ -394,6 +443,9 @@ a:hover {
     .moviePage .movie-data .movie-data-general {
       grid-area: 2/2/3/4;
       margin: .5em 1.5em;
+      -webkit-align-self: end;
+      -moz-align-self: end;
+      -ms-align-self: end;
       align-self: end; }
       .moviePage .movie-data .movie-data-general p:last-child {
         display: none; }
@@ -405,6 +457,9 @@ a:hover {
           text-transform: capitalize; }
     .moviePage .movie-data .imdb-rating {
       grid-area: 2/3/3/5;
+      -webkit-justify-self: end;
+      -moz-justify-selff: end;
+      -ms-justify-self: end;
       justify-self: end;
       top: 0.8em;
       position: relative; }
@@ -451,7 +506,9 @@ a:hover {
       height: 3em;
       background-color: #42464a;
       border: .1em solid;
-      transition: all .8s;
+      -webkit-transition: all ease 0.8s;
+      -moz-transition: all ease 0.8s;
+      transition: all ease 0.8s;
       text-transform: capitalize;
       color: #bcbcbc; }
     .movieOrder div button {
@@ -493,6 +550,9 @@ a:hover {
     background: #febd11;
     color: #42464a;
     border: none;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
     border-radius: 20px;
     outline: none;
     font-size: 1.5em;
@@ -503,15 +563,18 @@ a:hover {
   margin-bottom: 20px;
   background-color: #b3b3b3;
   overflow: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
   border-radius: 5px; }
   .progress-bar-review .progress-bar-rating {
     height: 100%;
     background-color: #ffd100;
     -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-    -webkit-transition: width .6s ease;
-    -o-transition: width .6s ease;
-    transition: width .6s ease; }
+    -webkit-transition: width 0.6s ease;
+    -moz-transition: width 0.6s ease;
+    transition: width 0.6s ease; }
 
 .timeChoose {
   color: #42464a;
@@ -557,7 +620,9 @@ a:hover {
         border-bottom: 1px solid #42464a;
         background-color: transparent;
         outline: none;
-        transition: all .3s linear;
+        -webkit-transition: width 0.3s linear;
+        -moz-transition: width 0.3s linear;
+        transition: width 0.3s linear;
         text-align: center; }
         .movie-payment form div input:focus {
           border-bottom: 1px solid #febd11; }
@@ -569,6 +634,9 @@ a:hover {
       border: none;
       outline: none;
       margin: 1em auto;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
       border-radius: 20px;
       font-weight: 700;
       font-size: 1.5em;
@@ -590,6 +658,9 @@ a:hover {
     margin: .5em auto;
     background-color: #42464a;
     color: #febd11;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
     border-radius: 20px;
     border: none;
     outline: none;
@@ -606,6 +677,9 @@ a:hover {
     background: #febd11;
     color: #42464a;
     border: none;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
     border-radius: 20px;
     outline: none;
     font-size: 1.5em;
@@ -626,6 +700,9 @@ a:hover {
     background-color: #42464a;
     color: #febd11;
     padding: 1em;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
     border-radius: 10px;
     font-weight: 700;
     clear: both; }
@@ -669,6 +746,10 @@ a:hover {
       color: #42464a;
       padding: 1em;
       border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      border-radius: 10px;
       text-transform: capitalize;
       font-size: 1.3em; }
       .wrapper-user-movie-review .user-movie-review div form button {
@@ -679,9 +760,14 @@ a:hover {
         width: 4em;
         border: 1px solid #42464a;
         text-transform: uppercase;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
         border-radius: 50px;
         height: 4em;
-        transition: all .3s linear; }
+        -webkit-transition: width 0.3s linear;
+        -moz-transition: width 0.3s linear;
+        transition: width 0.3s linear; }
         .wrapper-user-movie-review .user-movie-review div form button:hover {
           color: #febd11; }
       .wrapper-user-movie-review .user-movie-review div form textarea {

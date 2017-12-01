@@ -4,6 +4,19 @@ $primary-color: #febd11;
 $secondary-color: #42464a;
 $tertiary: #bcbcbc;
 
+
+@mixin translateX($position) {
+    -webkit-transform: translateX($position);
+    transform: translateX($position);
+}
+
+@mixin transition($property, $duration, $timing-function) {
+    -webkit-transition: $property $duration $timing-function;
+    -moz-transition: $property $duration $timing-function;
+    transition: $property $duration $timing-function;
+}
+
+
 @media screen and (max-width: 42.5em) {
 
     .menu {
@@ -32,11 +45,13 @@ $tertiary: #bcbcbc;
             text-align: center;
             top: 5.5em;
             background: $secondary-color;
-            -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+            //-webkit-transform: translateX(100%);
+            //transform: translateX(100%);
+            @include translateX(100%);
             z-index: 1;
             width: 100%;
-            transition: all 0.1s;
+            //transition: all 0.1s;
+            @include transition(all, ease, 0.1s);
 
             ul {
                 li {
@@ -51,7 +66,8 @@ $tertiary: #bcbcbc;
 
             nav {
                 right: 44.5%;
-                transition: all 0.1s;
+                //transition: all 0.1s;
+                @include transition(all, ease, 0.1s);
             }
         }
     }
@@ -74,8 +90,6 @@ $tertiary: #bcbcbc;
         }
 
         .company-social {
-
-            justify-self: center;
 
             ul {
 

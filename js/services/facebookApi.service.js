@@ -48,7 +48,7 @@ app.service('facebookApiService', ['$cookies','$location', 'userService', '$q', 
                         FB.api('/me', {fields: 'name, picture, email, birthday'}, function(response) {
                             // console.log('user details - ' + JSON.stringify(response));
                             userService.putUserCookies(response.name, response.email, response.picture.data.url);
-                            userService.addUserToDb(response.name, response.email, response.picture.data.url, response.birthday);
+                            // userService.addUserToDb(response.name, response.email, response.picture.data.url, response.birthday);
                             $location.path('/main').replace();
                         });
                     } else {

@@ -665,12 +665,12 @@ a:hover {
     }
 
     h2 {
-      grid-area: 1/2/1/5;
+      grid-area: 1/2/1/4;
       margin: 0 0.5em;
     }
 
     p {
-      grid-area: 1/2/1/5;
+      grid-area: 1/2/1/4;
       margin: 3.5em 1.5em;
       font-size: .9em;
     }
@@ -699,7 +699,7 @@ a:hover {
     }
 
     .imdb-rating {
-      grid-area: 2/3/3/5;
+      grid-area: 2/3/3/4;
       //justify-self: end;
       @include justify-self(end);
       top: 0.8em;

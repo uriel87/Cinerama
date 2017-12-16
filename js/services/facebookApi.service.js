@@ -41,20 +41,20 @@ app.service('facebookApiService', ['$cookies','$location', 'userService', '$q', 
         FB.getLoginStatus(function(response) {
             if (response.status === 'connected') {
                 // console.log('user details - ' + JSON.stringify(response));
-                FB.login(function(response) {
-                    if (response.authResponse) {
-                        // var accessToken = response.authResponse.accessToken;
-                        // console.log('accessToken - ' + JSON.stringify(accessToken));
-                        FB.api('/me', {fields: 'name, picture, email, birthday'}, function(response) {
-                            // console.log('user details - ' + JSON.stringify(response));
-                            userService.putUserCookies(response.name, response.email, response.picture.data.url);
-                            // userService.addUserToDb(response.name, response.email, response.picture.data.url, response.birthday);
-                            $location.path('/main').replace();
-                        });
-                    } else {
-                        console.log('User cancelled login or did not fully authorize.');
-                    }
-                }, {scope: 'user_birthday'});
+                // FB.login(function(response) {
+                //     if (response.authResponse) {
+                //         // var accessToken = response.authResponse.accessToken;
+                //         // console.log('accessToken - ' + JSON.stringify(accessToken));
+                //         FB.api('/me', {fields: 'name, picture, email, birthday'}, function(response) {
+                //             // console.log('user details - ' + JSON.stringify(response));
+                //             userService.putUserCookies(response.name, response.email, response.picture.data.url);
+                //             // userService.addUserToDb(response.name, response.email, response.picture.data.url, response.birthday);
+                //             $location.path('/main').replace();
+                //         });
+                //     } else {
+                //         console.log('User cancelled login or did not fully authorize.');
+                //     }
+                // }, {scope: 'user_birthday'});
             }
             else {
                 FB.login(function(response) {

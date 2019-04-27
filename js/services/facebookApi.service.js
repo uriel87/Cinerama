@@ -57,7 +57,7 @@ app.service('facebookApiService', ['$cookies','$location', 'userService', '$q', 
                 //     }
                 // }, {scope: 'user_birthday'});
             }
-            else {
+            //else {
                 FB.login(function(response) {
                     if (response.authResponse) {
                         // var accessToken = response.authResponse.accessToken;
@@ -72,7 +72,7 @@ app.service('facebookApiService', ['$cookies','$location', 'userService', '$q', 
                         console.log('User cancelled login or did not fully authorize.');
                     }
                 }, {scope: 'user_birthday'});
-            }
+            //}
         });
     }
 
